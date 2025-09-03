@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "Raleway", sans-serif;
+}
+
+.container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #d4002a;
+    padding: 12px;
+}
+
+.spanNav {
+    margin-right: 25rem;
+    margin-left: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.spanNav:hover{
+    opacity: 0.7;
+}
+
+.btn {
+    background: white;
+    color: #d4002a;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: all 0.4s ease;
+    font-weight: 500;
+}
+
+.btn.light {
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: all 0.4s ease;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.btn.outlined {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: all 0.4s ease-in-out;
+    margin-right: 3rem;
+}
+
+.btn.outlined:hover{
+    background-color: #fff;
+    color: #d4002a;
+}
+
+.chgirma{
+    background-color: transparent;
+    color: #fff;
+}
+
+.chgirma:hover{
+    background-color: #fff;
+    color: #d4002a;
+}
+
+.phone {
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    margin-left: -5rem;
+}
+
+.header span {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.header span.active {
+    font-weight: bold;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
