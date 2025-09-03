@@ -11,7 +11,7 @@
 }
 
 .container {
-    max-width: 1520px;
+    max-width: 1420px;
     width: 100%;
     margin: 0 auto;
 }
@@ -114,6 +114,98 @@ body {
     font-weight: bold;
 }
 
+.hero{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.hero img{
+    width: 150px;
+}
+
+.hero button{
+    padding: 10px 40px;
+    font-size: 18px;
+    background-color: transparent;
+    border-radius: 14px;
+    border: 2px solid #000;
+    transition: all 0.25s ease-in-out;
+}
+
+.hero button:hover{
+    border: 2px solid #d4002a;
+    color: #d4002a;
+}
+
+.hero button i{
+    font-weight: 700;
+    font-size: 23px;
+    margin-right: 12px;
+}
+
+
+
+.hero input {
+    width: 650px;
+    height: 50px;
+    background-color: #f1f0f0;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hero .input{
+    display: flex;
+    align-items: center;
+}
+
+.hero .input i{
+    position: absolute;
+    right: 28.5%;
+    padding: 12px 30px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #d4002a;
+}
+
+.hero_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.hero_menu:hover{
+    color: #d4002a;
+}
+
+.hero_menu i{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#sup{
+    display: flex;
+}
+
+#sup sup{
+    background-color: #d4002a;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding-top: 3px;
+    padding-left: 6px;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -133,4 +225,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+button{
+    cursor: pointer;
+}
+
+i{
+    cursor: pointer;
 }
