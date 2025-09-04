@@ -22,18 +22,41 @@
         <img src="./img/png/plus.lRzD4Jf7.png" alt="this is olcha logo">
         <div class="heroBtn">
             <button id="menu-btn">
-                <i class="ri-menu-line"></i> Katalog
+                <i class="ri-close-large-fill close"></i>
+                <i class="ri-menu-line menuBtn"></i> Katalog
+
             </button>
 
             <div class="menu" id="menu">
                 <div class="menuFlex">
                     <div class="dropdown">
                         <div class="menuBox">
-                            <div>
+                            <div id="dropdown_menu">
                                 <img src="./img/svg/eco-products-logo.svg" alt="">
                                 <h2>Olcha Market</h2>
                             </div>
                             <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <!-- <div class="dropdown2">
+                            <div class="dropdown_menu">
+                                <img src="./img/svg/nasiya-logo.svg" alt="">
+                                <h2>Olcha nasiya</h2>
+                            </div>
+                            <div class="dropdown_menu">
+                                <img src="./img/svg/invest-logo.svg" alt="">
+                                <h2>Olcha invest</h2>
+                            </div>
+                            <div class="dropdown_menu">
+                                <img src="./img/svg/pay-logo.svg" alt="">
+                                <h2>Olcha ERP</h2>
+                            </div>
+                            <div class="dropdown_menu">
+                                <img src="./img/svg/b2b-logo.svg" alt="">
+                                <h2>Olcha B2B</h2>
+                            </div>
+                        </div> -->
+                        <div>
+
                         </div>
                     </div>
                     <ul class="ul">
@@ -44,9 +67,37 @@
                         <li><a href="#">Barchasi oshxona uchun</a></li>
                         <li><a href="#">Sport anjomlari</a></li>
                         <li><a href="#">Go‘zallik va salomatlik</a></li>
+                        <li><a href="#">Televizor, foto-video va audio</a></li>
+                        <li><a href="#">Noutbuk, printer, kompyuterlar</a></li>
+                        <li><a href="#">Smartfon, telefon, gadjet, <span>aksessuarlar</span></a></li>
+                        <li><a href="#">Maishiy texnika</a></li>
+                        <li><a href="#">Barchasi oshxona uchun</a></li>
+                        <li><a href="#">Sport anjomlari</a></li>
+                        <li><a href="#">Go‘zallik va salomatlik</a></li>
                     </ul>
                 </div>
                 <div class="menuFlex2">
+                    <div>
+                        <div class="menuDiv">
+                            <h3>Telivizor</h3>
+                            <p>Samsung</p>
+                            <p>Sony</p>
+                            <p>Artel</p>
+                            <p>LG</p>
+                            <p>Shivaki</p>
+                            <p>Vesta</p>
+                            <p>Premier</p>
+                            <p>ziffler</p>
+                            <p>Hisense</p>
+                            <p>TCL</p>
+                            <p>Xiaomi</p>
+                            <p>Immer</p>
+                            <p>Skyworth</p>
+                            <p>Avalon</p>
+                            <p>Rulls</p>
+                        </div>
+
+                    </div>
                     <div class="menuDiv">
                         <h3>Smartfonlar</h3>
                         <p>Samsung</p>
@@ -60,20 +111,7 @@
                         <p>Redmi</p>
                         <p>Duoqin</p>
                     </div>
-                    <div>
-                        <h3>Smartfonlar</h3>
-                        <p>Samsung</p>
-                        <p>Apple</p>
-                        <p>Xiaome</p>
-                        <p>Vivo</p>
-                        <p>Huawei</p>
-                        <p>Honor</p>
-                        <p>Novey</p>
-                        <p>Tecno</p>
-                        <p>Redmi</p>
-                        <p>Duoqin</p>
-                    </div>
-                    <div>
+                    <div class="menuDiv">
                         <h3>Smartfonlar</h3>
                         <p>Samsung</p>
                         <p>Apple</p>
@@ -115,6 +153,49 @@
             <p>Kirish</p>
         </div>
     </section>
+    <!-- Swiper -->
+
+    <div class="wrap">
+        <div class="topbar">
+            <h1>Slider</h1>
+            <div class="controls">
+                <span class="chip">Drag • Swipe • Keys</span>
+                <label class="toggle" title="Autoplay">
+                    <i class="ri-play-line"></i>
+                    <input id="autoplayToggle" type="checkbox" checked>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="slider" id="slider">
+            <div class="viewport">
+                <div class="slides">
+                    <div class="slide"><img
+                            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop"
+                            alt="Slide 1">
+                        <div class="caption">Slide 1</div>
+                    </div>
+                    <div class="slide"><img
+                            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop"
+                            alt="Slide 2">
+                        <div class="caption">Slide 2</div>
+                    </div>
+                    <div class="slide"><img
+                            src="https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?q=80&w=1600&auto=format&fit=crop"
+                            alt="Slide 3">
+                        <div class="caption">Slide 3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <button class="btn2" data-dir="-1" aria-label="Previous"><i class="ri-arrow-left-s-line"></i></button>
+                <button class="btn2" data-dir="1" aria-label="Next"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+            <div class="dots" aria-label="Pagination"></div>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 

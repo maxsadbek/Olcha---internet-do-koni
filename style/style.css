@@ -157,6 +157,7 @@ body {
     font-size: 17px;
     border-radius: 10px;
     position: relative;
+    margin-right: 3rem;
 }
 
 .hero .input {
@@ -210,22 +211,25 @@ body {
     margin-top: -5px;
 }
 
-.menuBox {
+.dropdown {
     margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 1.3rem;
     padding: 10px 15px;
     border: 1px solid #d4002a;
     border-radius: 12px;
     cursor: pointer;
-    width: 67%;
+    width: 80%;
     margin-bottom: 1rem;
 }
 
 .menuBox img {
     width: 30px;
+}
+
+.menuBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .menuBox>div {
@@ -234,7 +238,7 @@ body {
 }
 
 .menuBox>div h2 {
-    font-size: 18px;
+    font-size: 16 px;
     margin-left: 10px;
     color: #d4002a;
 }
@@ -244,32 +248,41 @@ body {
     color: #d4002a;
 }
 
-.menu{
+.menu {
     margin-top: 1rem;
-    width: 1542px;
+    width: 1548px;
     margin-left: -15rem;
     display: flex;
     gap: 3rem;
 }
 
-.menuFlex2{
+.menuFlex2 {
     display: flex;
     gap: 8rem;
+    overflow: auto;
+    width: 100%;
 }
 
-.menuFlex2 .menuDiv{
+.menuFlex2 .menuDiv {
     line-height: 1.5;
+    height: 420px;
 }
 
-.menuFlex2 .menuDiv h3{
-    font-size: 18px;
+.menuFlex2 .menuDiv h3 {
+    font-size: 16px;
     margin-bottom: 1.5rem;
 }
 
-.menuFlex2 .menuDiv p{
+.menuFlex2 .menuDiv p {
     font-size: 16px;
     color: #555;
     margin-top: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menuFlex2 .menuDiv p:hover {
+    color: #ce022bcd;
 }
 
 .menu {
@@ -280,52 +293,260 @@ body {
     border-radius: 10px;
     padding: 10px 55px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    /* display: none; */
+    display: none;
     z-index: 1000;
+    overflow: auto;
 }
 
 .menu.active {
-    display: block;
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.ul{
+.ul {
     line-height: 2;
     border-radius: 2px solid #000;
     list-style: none;
     width: 320px;
+    overflow: auto;
+    height: 300px;
+    width: 400px;
 }
 
-.ul a{
+.ul a {
     text-decoration: none;
     color: #444;
     font-size: 17px;
     padding: 10px;
+    transition: all 0.35s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.ul a:hover{
+.ul a:hover {
     background-color: #f4f4f4;
     color: #d4002a;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+.dropdown_menu img {
+    width: 40px;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #444;
+
+
+.close {
+    display: none;
+}
+
+
+:root {
+    --bg: #0f1115;
+    --card: #151823;
+    --muted: #8a93a6;
+    --accent: #4f8cff;
+    --radius: 20px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+
+
+.wrap {
+    max-width: 1000px;
+    margin: 48px auto;
+    padding: 0 16px
+}
+
+
+.slider {
+    position: relative;
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow)
+}
+
+.viewport {
+    overflow: hidden
+}
+
+.slides {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0;
+    will-change: transform;
+    transition: transform .45s cubic-bezier(.2, .7, .2, 1)
 }
 
-.swiper-slide img {
-    display: block;
+.slide {
+    min-width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    user-select: none
+}
+
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block
+}
+
+.caption {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, .45);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    font-weight: 600
+}
+
+
+.nav {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none
+}
+
+.btn2 {
+    pointer-events: auto;
+    margin: 0 8px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .1);
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .2s
+}
+
+.btn2:hover {
+    background: rgba(255, 255, 255, .18);
+    transform: translateY(-1px)
+}
+
+
+.dots {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, .35);
+    border-radius: 999px;
+    backdrop-filter: blur(6px)
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #707d96;
+    opacity: .6;
+    border: none;
+    cursor: pointer
+}
+
+.dot.active {
+    opacity: 1;
+    background: var(--accent)
+}
+
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.topbar h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.chip {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #1d2331;
+    color: var(--muted);
+    border: 1px solid #2a3142
+}
+
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid #2a3142;
+    background: #1a1f2d;
+    color: #cdd5e0;
+    cursor: pointer
+}
+
+.toggle input {
+    appearance: none;
+    width: 32px;
+    height: 18px;
+    border-radius: 999px;
+    background: #2a3142;
+    position: relative;
+    outline: none
+}
+
+.toggle input:checked {
+    background: var(--accent)
+}
+
+.toggle input:checked::after {
+    transform: translateX(14px)
+}
+
+.toggle input::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform .18s
+}
+
+
+@media (max-width:700px) {
+    .slide {
+        aspect-ratio: 4/3
+    }
+
+    .caption {
+        font-size: 14px
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+        gap: 8px
+    }
 }
 
 button {
