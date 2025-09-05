@@ -352,6 +352,10 @@ body {
     display: none;
 }
 
+.sliderTime{
+    display: flex;
+    justify-content: space-between;
+}
 
 :root {
     --bg: #0f1115;
@@ -368,7 +372,7 @@ body {
     max-width: 1100px;
     margin: 38px 0;
     padding: 0 16px;
-    margin-left: 2.5rem;
+    margin-left: -1rem;
 }
 
 
@@ -572,4 +576,27 @@ button {
 
 i {
     cursor: pointer;
+}
+
+.dataTime{
+    margin-top: 3.3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 400px;
+    border: 3px solid #d4002a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dataTimeBox{
+    display: flex;
+    gap: 5px;
+}
+
+.Time{
+    padding: 3px;
+    border: 2px solid #8a93a62e;
+    height: 27px;
+    border-radius: 7px;
 }
