@@ -35,18 +35,18 @@ document.body.prepend(container);
 
 document.body.prepend(navbar);
 
+
 btn.addEventListener('click', () => {
     menu.classList.toggle('active');
     overlay.classList.toggle('show');
-    menuBtn.classList.remove('#ri-menu-line')
-    closeBtn.classList.add('')
+    btn.classList.toggle('open');
 });
 
 overlay.addEventListener('click', () => {
-    menu.classList.remove('open');
+    menu.classList.remove('active');
     overlay.classList.remove('show');
+    btn.classList.remove('open');
 });
-
 
 (function () {
     const root = document.getElementById('slider');
@@ -58,7 +58,7 @@ overlay.addEventListener('click', () => {
     const autoplayToggle = document.getElementById('autoplayToggle');
 
 
-    let i = 0; // active index
+    let i = 0; 
     let x0 = null, dx = 0, isDown = false;
     let timer = null; const interval = 3500; const threshold = 40; // px
 
@@ -82,20 +82,17 @@ overlay.addEventListener('click', () => {
     function step(dir) { go(i + dir) }
 
 
-    // Buttons
     prevBtn.addEventListener('click', () => step(-1));
     nextBtn.addEventListener('click', () => step(1));
 
 
-    // Keyboard
-    root.tabIndex = 0; // focusable
+    root.tabIndex = 0;
     root.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') step(-1);
         if (e.key === 'ArrowRight') step(1);
     });
 
 
-    // Drag / swipe
     const viewport = root.querySelector('.viewport');
     viewport.addEventListener('pointerdown', (e) => { isDown = true; x0 = e.clientX; dx = 0; viewport.setPointerCapture(e.pointerId); track.style.transition = 'none'; });
     viewport.addEventListener('pointermove', (e) => {
@@ -108,7 +105,6 @@ overlay.addEventListener('click', () => {
     }
 
 
-    // Autoplay
     function start() { stop(); timer = setInterval(() => step(1), interval); }
     function stop() { if (timer) clearInterval(timer); timer = null; }
     autoplayToggle.addEventListener('change', () => autoplayToggle.checked ? start() : stop());
@@ -116,11 +112,10 @@ overlay.addEventListener('click', () => {
     root.addEventListener('mouseleave', () => autoplayToggle.checked && start());
 
 
-    // Init
     update();
     if (autoplayToggle.checked) start();
 
 
-    // Public API for quick customization in console
     window.sliderAPI = { go, next: () => step(1), prev: () => step(-1), pause: stop, play: start };
+
 })();
