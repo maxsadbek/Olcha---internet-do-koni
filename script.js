@@ -5,7 +5,9 @@ const overlay = document.getElementById('menu');
 const menuBtn = document.querySelector(".menuBtn")
 const closeBtn = document.querySelector(".close")
 const section = document.querySelector(".Cadr_slider_parent");
-
+const parentSection = document.querySelector(".parent")
+const containerClass = document.querySelector(".parent.container");
+// navbar
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
     { tag: "button", text: "Chegirmalar", class: "btn chgirma" },
@@ -17,7 +19,7 @@ const navItems = [
     { tag: "span", text: "O'z", class: "active" },
     { tag: "span", text: "Рус" },
 ];
-
+// card
 const card = [
     {
         id: crypto.randomUUID(),
@@ -71,7 +73,7 @@ const card = [
 ]
 
 
-
+// cardlar
 card.forEach(item => {
     const cardEl = document.createElement("div");
     cardEl.classList.add("cradSlider");
@@ -86,9 +88,11 @@ card.forEach(item => {
     section.appendChild(cardEl);
 });
 
+
+
+// navbar
 const navbar = document.createElement("div");
 navbar.className = "header";
-
 navItems.forEach(item => {
     const el = document.createElement(item.tag);
     el.textContent = item.text;
@@ -104,7 +108,7 @@ document.body.prepend(container);
 
 document.body.prepend(navbar);
 
-
+// menu btn
 btn.addEventListener('click', () => {
     menu.classList.toggle('active');
     overlay.classList.toggle('show');
@@ -116,7 +120,7 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('show');
     btn.classList.remove('open');
 });
-
+// slider
 (function () {
     const root = document.getElementById('slider');
     const track = root.querySelector('.slides');

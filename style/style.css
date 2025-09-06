@@ -352,7 +352,7 @@ body {
     display: none;
 }
 
-.sliderTime{
+.sliderTime {
     display: flex;
     justify-content: space-between;
 }
@@ -578,7 +578,7 @@ i {
     cursor: pointer;
 }
 
-.dataTime{
+.dataTime {
     margin-top: 3.3rem;
     display: flex;
     justify-content: space-between;
@@ -589,40 +589,180 @@ i {
     padding: 10px;
 }
 
-.dataTimeBox{
+.dataTimeBox {
     display: flex;
     gap: 5px;
 }
 
-.Time{
+.Time {
     padding: 3px;
     border: 2px solid #8a93a62e;
     height: 27px;
     border-radius: 7px;
 }
 
-.Cadr_slider_parent{
+.Cadr_slider_parent {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
 
-.cradSlider{
+.cradSlider {
     cursor: pointer;
     transition: all 0.16s ease-in-out;
     margin-bottom: 2rem;
 }
 
-.cradSlider h3{
+.cradSlider h3 {
     font-size: 16px;
     width: 130px;
     text-align: center;
 }
 
-.cradSlider img{
+.cradSlider img {
     cursor: pointer;
 }
 
-.cradSlider:hover{
+.cradSlider:hover {
     transform: scale(1.02);
+    color: #d4002a;
+}
+
+.img {
+    width: 100%;
+    transition: all 0.23s ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1.01);
+    object-fit: cover;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
+    background-color: #d4002a;
+    padding: 20px;
+    width: 100%;
+    border-radius: 12px;
+    height: auto;
+}
+
+.div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    width: 440px;
+    height: 280px;
+    cursor: pointer;
+}
+
+.div1 .divBox1{
+    display: flex;
+}
+
+.div1 >div h3{
+    font-size: 16px;
+    width: 190px;
+    font-weight: 400;
+}
+
+.div1>div i{
+    margin-top: -6px;
+    font-size: 30px;
+    margin-left: -8px;
+    color: #828997;
+}
+
+.div1 img{
+    width: 200px;
+    height: 200px;
+    margin-left: -2.5rem;
+    position: relative;
+}
+
+.div1 .btn3{
+    z-index: 111;
+    height: 22px;
+    padding: 3px;
+    background-color: #d4002a;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+}
+
+.price{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price p{
+    color: #828997;
+    text-decoration-line: line-through;
+}
+
+.price i{
+    font-size: 10px;
+}
+
+.newPrice{
+    margin-top: 5px;
+}
+
+.newPrice h2{
+    color: #d4002a;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.newPrice p{
+    margin-top: 10px;
+    padding: 6px;
+    width: 130px;
+    font-size: 12px;
+    background-color: rgb(255, 213, 0);
+    border-radius: 5px;
+}
+
+.div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 5;
+
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 8 / span 8;
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 8 / span 8;
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 8 / span 8;
+    grid-column-start: 8;
+    grid-row-start: 1;
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 8 / span 8;
+    grid-column-start: 10;
+    grid-row-start: 1;
 }
