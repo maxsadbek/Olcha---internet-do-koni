@@ -95,17 +95,17 @@ card.forEach(item => {
     section.appendChild(cardEl);
 });
 
-menuMobile.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    overlay.classList.toggle('show');
-    btn.classList.toggle('open');
-});
+    menuMobile.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        overlay.classList.toggle('show');
+        btn.classList.toggle('open');
+    });
 
-overlay.addEventListener('click', () => {
-    menu.classList.remove('active');
-    overlay.classList.remove('show');
-    btn.classList.remove('open');
-});
+    overlay.addEventListener('click', () => {
+        menu.classList.remove('active');
+        overlay.classList.remove('show');
+        btn.classList.remove('open');
+    });
 
 // navbar
 const navbar = document.createElement("div");
