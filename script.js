@@ -7,6 +7,9 @@ const closeBtn = document.querySelector(".close")
 const section = document.querySelector(".Cadr_slider_parent");
 const parentSection = document.querySelector(".parent")
 const containerClass = document.querySelector(".parent.container");
+const language = document.querySelector(".language")
+const rus = document.querySelector('#rus')
+const menuMobile = document.querySelector("#menu2")
 // navbar
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
@@ -71,6 +74,10 @@ const card = [
     },
 
 ]
+0
+language.addEventListener("click", () => {
+        rus.classList.toggle("active")
+})
 
 
 // cardlar
@@ -88,7 +95,17 @@ card.forEach(item => {
     section.appendChild(cardEl);
 });
 
+menuMobile.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    overlay.classList.toggle('show');
+    btn.classList.toggle('open');
+});
 
+overlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+    overlay.classList.remove('show');
+    btn.classList.remove('open');
+});
 
 // navbar
 const navbar = document.createElement("div");
@@ -192,3 +209,4 @@ overlay.addEventListener('click', () => {
     window.sliderAPI = { go, next: () => step(1), prev: () => step(-1), pause: stop, play: start };
 
 })();
+
