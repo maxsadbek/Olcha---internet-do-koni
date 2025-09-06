@@ -1055,7 +1055,7 @@ i {
     }
 
     .navMenu input{
-        width: 310px;
+        width: 350px;
         padding: 10px;
         background-color: #f4f4f4;
         border: none;
@@ -1277,7 +1277,7 @@ i {
         aspect-ratio: 16/9;
         position: relative;
         user-select: none;
-        height: 125px;
+        height: 165px;
     }
 
     .slide img {
@@ -1644,3 +1644,4 @@ i {
         grid-row-start: 1;
     }
 }
+

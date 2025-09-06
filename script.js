@@ -9,7 +9,7 @@ const parentSection = document.querySelector(".parent")
 const containerClass = document.querySelector(".parent.container");
 const language = document.querySelector(".language")
 const rus = document.querySelector('#rus')
-const menuMobile = document.querySelector("#menu2")
+const menuMobile = document.querySelector("#menu2 i")
 // navbar
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
