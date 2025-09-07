@@ -232,6 +232,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.ulDropdown{
+    display: none;
+}
+
 .navMenu {
     display: none;
 }
@@ -354,6 +358,10 @@ body {
 .ul a:hover {
     background-color: #f4f4f4;
     color: #d4002a;
+}
+
+.ul i{
+    display: none;
 }
 
 .dropdown_menu img {
@@ -1034,8 +1042,29 @@ i {
         border: 1px solid #d4002a;
         border-radius: 12px;
         cursor: pointer;
-        width: 80%;
+        width: 130%;
         margin-bottom: 1rem;
+    }
+
+    .dropdown_menu2{
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        text-transform: capitalize;
+        display: none;
+    }
+
+    .dropdown_menu2.activeBtn{
+        display: block;
+    }
+
+    .dropdown_menu2 h2{
+        font-size: 15px;
+        margin-left: 1rem;
+    }
+
+    .dropdown_menu2 img{
+        width: 40px;
     }
 
     .navMenu {
@@ -1091,11 +1120,12 @@ i {
     }
 
     .menu {
-        margin-top: 1rem;
-        width: 1048px;
-        margin-left: -25rem;
+        margin-top: -6rem;
+        width: 418px;
+        height: 500px;
+        margin-left: -18rem;
         display: flex;
-        gap: 3rem;
+        gap: 0rem;
     }
 
     #menu-btn .close {
@@ -1111,14 +1141,15 @@ i {
     }
 
     .menuFlex2 {
-        gap: 8rem;
+        gap: 0rem;
         overflow: auto;
-        width: 100%;
+        width: auto;
     }
 
     .menuFlex2 .menuDiv {
         line-height: 1.5;
         height: 420px;
+        display: none;
     }
 
     .menuFlex2 .menuDiv h3 {
@@ -1164,8 +1195,14 @@ i {
         list-style: none;
         width: 320px;
         overflow: auto;
-        height: 300px;
-        width: 400px;
+        height: 500px;
+        width: 140%;
+        flex-wrap: wrap;
+    }
+
+    .ul li{
+        position: relative;
+        margin-bottom: 20px;
     }
 
     .ul a {
@@ -1182,6 +1219,29 @@ i {
         background-color: #f4f4f4;
         color: #d4002a;
     }
+
+    .ulDropdown{
+        display: none;
+        font-size: 17px;
+        line-height: 2.4;
+        margin-left: 2rem;
+        font-weight: 100;
+        color: #444;
+        margin-bottom: 1rem;
+    }
+
+    .ulDropdown.activeDrop{
+        display: inline-block;
+    }
+
+    .ul i{
+        display: block;
+        position: absolute;
+        top: 1%;
+        right: 5%;
+    }
+
+
 
     .dropdown_menu img {
         width: 40px;
@@ -1282,7 +1342,7 @@ i {
 
     .slide img {
         width: 100%;
-        height: auto;
+        height: 165px;
         object-fit: cover;
         overflow: hidden;
     }

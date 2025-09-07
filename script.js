@@ -10,6 +10,13 @@ const containerClass = document.querySelector(".parent.container");
 const language = document.querySelector(".language")
 const rus = document.querySelector('#rus')
 const menuMobile = document.querySelector("#menu2 i")
+const ulDropdowns = document.querySelector(" #ulDropdowns")
+const dropdownIcon = document.querySelector("#dropdownIcon")
+const ulDropdowns2 = document.querySelector(" #ulDropdowns2")
+const dropdownIcon2 = document.querySelector("#dropdownIcon2")
+const dropdown_menu2 = document.querySelector("#dropdown_menu")
+const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
+
 // navbar
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
@@ -76,9 +83,20 @@ const card = [
 ]
 0
 language.addEventListener("click", () => {
-        rus.classList.toggle("active")
+    rus.classList.toggle("active")
 })
 
+dropdownIcon.addEventListener("click", () => {
+    ulDropdowns.classList.toggle("activeDrop")
+})
+
+dropdownIcon2.addEventListener("click", () => {
+    ulDropdowns2.classList.toggle("activeDrop")
+})
+
+dropdown_menu2.addEventListener("click", () =>{
+    dropdonwBtn2.classList.toggle("activeBtn")
+})
 
 // cardlar
 card.forEach(item => {
@@ -95,17 +113,10 @@ card.forEach(item => {
     section.appendChild(cardEl);
 });
 
-    menuMobile.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        overlay.classList.toggle('show');
-        btn.classList.toggle('open');
-    });
+menuMobile.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
 
-    overlay.addEventListener('click', () => {
-        menu.classList.remove('active');
-        overlay.classList.remove('show');
-        btn.classList.remove('open');
-    });
 
 // navbar
 const navbar = document.createElement("div");
@@ -126,17 +137,11 @@ document.body.prepend(container);
 document.body.prepend(navbar);
 
 // menu btn
-btn.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    overlay.classList.toggle('show');
-    btn.classList.toggle('open');
+btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    btn.classList.toggle("open");
 });
 
-overlay.addEventListener('click', () => {
-    menu.classList.remove('active');
-    overlay.classList.remove('show');
-    btn.classList.remove('open');
-});
 // slider
 (function () {
     const root = document.getElementById('slider');

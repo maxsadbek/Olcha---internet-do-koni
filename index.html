@@ -12,7 +12,7 @@
     <!-- remix icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
         integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
-        crossorigin="anonymous" referrerpolicy  ="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--  -->
 </head>
 
@@ -44,55 +44,84 @@
                 <i class="ri-close-large-fill close"></i>
                 <i class="ri-menu-line menuBtn"></i> Katalog
             </button>
-
-
             <div class="menu" id="menu">
+                
                 <div class="menuFlex">
-                    <div class="dropdown">
-                        <div class="menuBox">
-                            <div id="dropdown_menu">
+                    <div class="dropdown" id="dropdown_menu">
+                        <div class="menuBox" >
+                            <div >
                                 <img src="./img/svg/eco-products-logo.svg" alt="">
                                 <h2>Olcha Market</h2>
                             </div>
                             <i class="ri-arrow-down-s-line"></i>
                         </div>
-                        <!-- <div class="dropdown2">
-                            <div class="dropdown_menu">
+                        <div class="dropdown2" id="dropdonwBtn2">
+                            <div class="dropdown_menu2" >
                                 <img src="./img/svg/nasiya-logo.svg" alt="">
                                 <h2>Olcha nasiya</h2>
                             </div>
-                            <div class="dropdown_menu">
+                            <div class="dropdown_menu2">
                                 <img src="./img/svg/invest-logo.svg" alt="">
                                 <h2>Olcha invest</h2>
                             </div>
-                            <div class="dropdown_menu">
+                            <div class="dropdown_menu2">
                                 <img src="./img/svg/pay-logo.svg" alt="">
                                 <h2>Olcha ERP</h2>
                             </div>
-                            <div class="dropdown_menu">
+                            <div class="dropdown_menu2">
                                 <img src="./img/svg/b2b-logo.svg" alt="">
                                 <h2>Olcha B2B</h2>
                             </div>
-                        </div> -->
-                        <div>
-
                         </div>
+
                     </div>
                     <ul class="ul">
-                        <li><a href="#">Televizor, foto-video va audio</a></li>
-                        <li><a href="#">Noutbuk, printer, kompyuterlar</a></li>
-                        <li><a href="#">Smartfon, telefon, gadjet, <span>aksessuarlar</span></a></li>
-                        <li><a href="#">Maishiy texnika</a></li>
-                        <li><a href="#">Barchasi oshxona uchun</a></li>
-                        <li><a href="#">Sport anjomlari</a></li>
-                        <li><a href="#">Go‘zallik va salomatlik</a></li>
-                        <li><a href="#">Televizor, foto-video va audio</a></li>
-                        <li><a href="#">Noutbuk, printer, kompyuterlar</a></li>
-                        <li><a href="#">Smartfon, telefon, gadjet, <span>aksessuarlar</span></a></li>
-                        <li><a href="#">Maishiy texnika</a></li>
-                        <li><a href="#">Barchasi oshxona uchun</a></li>
-                        <li><a href="#">Sport anjomlari</a></li>
-                        <li><a href="#">Go‘zallik va salomatlik</a></li>
+                        <div class="ulFlex">
+                            <li><a href="#">Televizor, foto-video va audio</a><i class="ri-arrow-down-s-line"
+                                    id="dropdownIcon"></i>
+                        </div>
+                        </li>
+                        <div class="ulDropdown" id="ulDropdowns">
+                            <p>Televizor</p>
+                            <p>Audio</p>
+                            <p>Videotexnika</p>
+                            <p>Media Player</p>
+                            <p>Diktafon</p>
+                            <p>Foto, Video</p>
+                            <p>O'yin konsoli</p>
+                            <p>Kronshteynlar</p>
+                        </div>
+                        <div class="ulFlex">
+                            <li><a href="#">Noutbuk, printer, kompyuterlar</a><i class="ri-arrow-down-s-line"
+                                    id="dropdownIcon2"></i></li>
+                        </div>
+                        <div class="ulDropdown" id="ulDropdowns2">
+                            <p>Noutbooklar</p>
+                            <p>Monitorlar</p>
+                            <p>Kompyuter qurilmalari</p>
+                            <p>Ofis jihozlari</p>
+                            <p>Noutbook uchun sumka va ryuksaglar</p>
+                            <p>Tizim uskunalari</p>
+                            <p>Monoblok</p>
+                            <p>Proektorlar</p>
+                            <p>Stol usti kompyuterlar</p>
+                            <p>Monitor uchun kronshteynlar va tagkursilar</p>
+                            <p>Videogaolish</p>
+                            <p>Lamiator</p>
+                            <p>Boshqa uskunalar</p>
+                        </div>
+
+                        <li><a href="#">Barchasi oshxona uchun</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Sport anjomlari</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Go‘zallik va salomatlik</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Televizor, foto-video va audio</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Noutbuk, printer, kompyuterlar</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Smartfon, telefon, gadjet, <span>aksessuarlar</span><i
+                                    class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a href="#">Maishiy texnika</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Barchasi oshxona uchun</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Sport anjomlari</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Go‘zallik va salomatlik</a><i class="ri-arrow-down-s-line"></i></li>
                     </ul>
                 </div>
                 <div class="menuFlex2">
