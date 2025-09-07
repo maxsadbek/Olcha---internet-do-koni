@@ -3,7 +3,8 @@ const text = document.querySelector("#text")
 const textDiv = document.querySelector("#textDiv")
 const section = document.querySelector("#section");
 
-const product = JSON.parse(localStorage.getItem("id"));
+const product = JSON.parse(localStorage.getItem("card"));
+console.log(product)
 
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
@@ -91,20 +92,6 @@ miniCard.forEach(item => {
 });
 
 section.appendChild(wrapper);
-
-const selectedId = localStorage.getItem("selectedCardId");
-
-if (selectedId) {
-        const selectedCard = card.find(item => item.id === selectedId);
-
-    if (selectedCard) {
-        const section = document.querySelector("#section");
-        section.innerHTML = `
-            <img src="${selectedCard.productImg}" alt="${selectedCard.theProductName}">
-            <h1>${selectedCard.theProductName}</h1>
-        `;
-    }
-}
 
 // navbar
 const navbar = document.createElement("div");
