@@ -17,6 +17,7 @@ const dropdownIcon2 = document.querySelector("#dropdownIcon2")
 const dropdown_menu2 = document.querySelector("#dropdown_menu")
 const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
 const mobileMenu = document.querySelector("#closeMobile")
+let mobileMenuBtn = document.querySelector("#mobileMenu")
 
 // navbar
 const navItems = [
@@ -115,11 +116,17 @@ dropdown_menu2.addEventListener("click", () => {
     dropdonwBtn2.classList.toggle("activeBtn")
 })
 
-mobileMenu.addEventListener("click", () => {
-    menu.classList.remove("active")
+menuMobile.addEventListener("click", () => {
+    menu.classList.toggle("active")
+    btn.classList.toggle("open");
 })
 
-// cardlar
+mobileMenu.addEventListener("click", () =>{
+    menu.classList.remove("active")
+    btn.classList.remove("open");
+})
+
+
 // cardlar
 card.forEach(item => {
     const cardEl = document.createElement("div");
@@ -163,6 +170,7 @@ btn.addEventListener("click", () => {
     menu.classList.toggle("active");
     btn.classList.toggle("open");
 });
+
 
 // slider
 (function () {
@@ -232,6 +240,5 @@ console.log(savedCard[0].id, savedCard[0].theProductName);
 
 const selectedId = "shuIDniOling";
 const selectedCard = savedCard.find(item => item.id === selectedId);
-console.log(selectedCard.theProductName, selectedCard.productImg);
 
 
