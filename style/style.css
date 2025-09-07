@@ -250,13 +250,19 @@ body {
     justify-content: space-between;
 }
 
+.dropdown_menu2{
+    display: none;
+}
+
+
 .menuBox>div {
     display: flex;
     align-items: center;
+
 }
 
 .menuBox>div h2 {
-    font-size: 16 px;
+    font-size: 16px;
     margin-left: 10px;
     color: #d4002a;
 }
@@ -364,11 +370,14 @@ body {
     display: none;
 }
 
+
 .dropdown_menu img {
     width: 40px;
 }
 
-
+#mobileMenu{
+    display: none;
+}
 
 .close {
     display: none;
@@ -1067,6 +1076,18 @@ i {
         width: 40px;
     }
 
+    #mobileMenu{
+        display: flex;
+        justify-content: space-between;
+        width: 132%;
+    }
+
+    #mobileMenu i{
+        border: 1px solid #000;
+        border-radius: 100%;
+        padding: 3px;
+    }
+
     .navMenu {
         display: block;
         padding: 10px;
@@ -1565,7 +1586,7 @@ i {
         color: #d4002a;
     }
 
-    .img {
+    .img img{
         width: 100%;
         transition: all 0.23s ease-in-out;
     }
@@ -1575,133 +1596,5 @@ i {
         object-fit: cover;
     }
 
-    .parent {
-        display: grid;
-        grid-template-columns: repeat(11, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        gap: 10px;
-        background-color: #d4002a;
-        padding: 20px;
-        width: 100%;
-        border-radius: 12px;
-        height: auto;
-    }
-
-    .div1 {
-        grid-column: span 3 / span 3;
-        grid-row: span 4 / span 4;
-        background-color: #fff;
-        display: flex;
-        padding: 20px;
-        border-radius: 15px;
-        width: 440px;
-        height: 280px;
-        cursor: pointer;
-    }
-
-    .div1 .divBox1 {
-        display: flex;
-    }
-
-    .div1>div h3 {
-        font-size: 16px;
-        width: 190px;
-        font-weight: 400;
-    }
-
-    .div1>div i {
-        margin-top: -6px;
-        font-size: 30px;
-        margin-left: -8px;
-        color: #828997;
-    }
-
-    .div1 img {
-        width: 200px;
-        height: 200px;
-        margin-left: -2.5rem;
-        position: relative;
-    }
-
-    .div1 .btn3 {
-        z-index: 111;
-        height: 22px;
-        padding: 3px;
-        background-color: #d4002a;
-        border-radius: 5px;
-        color: #fff;
-        border: none;
-    }
-
-    .price {
-        margin-top: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .price p {
-        color: #828997;
-        text-decoration-line: line-through;
-    }
-
-    .price i {
-        font-size: 10px;
-    }
-
-    .newPrice {
-        margin-top: 5px;
-    }
-
-    .newPrice h2 {
-        color: #d4002a;
-        font-weight: 600;
-        font-size: 19px;
-    }
-
-    .newPrice p {
-        margin-top: 10px;
-        padding: 6px;
-        width: 130px;
-        font-size: 12px;
-        background-color: rgb(255, 213, 0);
-        border-radius: 5px;
-    }
-
-    .div2 {
-        grid-column: span 3 / span 3;
-        grid-row: span 4 / span 4;
-        grid-column-start: 1;
-        grid-row-start: 5;
-
-    }
-
-    .div3 {
-        grid-column: span 2 / span 2;
-        grid-row: span 8 / span 8;
-        grid-column-start: 4;
-        grid-row-start: 1;
-    }
-
-    .div4 {
-        grid-column: span 2 / span 2;
-        grid-row: span 8 / span 8;
-        grid-column-start: 6;
-        grid-row-start: 1;
-    }
-
-    .div5 {
-        grid-column: span 2 / span 2;
-        grid-row: span 8 / span 8;
-        grid-column-start: 8;
-        grid-row-start: 1;
-    }
-
-    .div6 {
-        grid-column: span 2 / span 2;
-        grid-row: span 8 / span 8;
-        grid-column-start: 10;
-        grid-row-start: 1;
-    }
 }
 

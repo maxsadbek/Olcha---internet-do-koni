@@ -16,6 +16,7 @@ const ulDropdowns2 = document.querySelector(" #ulDropdowns2")
 const dropdownIcon2 = document.querySelector("#dropdownIcon2")
 const dropdown_menu2 = document.querySelector("#dropdown_menu")
 const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
+const mobileMenu = document.querySelector("#closeMobile")
 
 // navbar
 const navItems = [
@@ -81,7 +82,6 @@ const card = [
     },
 
 ]
-0
 language.addEventListener("click", () => {
     rus.classList.toggle("active")
 })
@@ -94,8 +94,12 @@ dropdownIcon2.addEventListener("click", () => {
     ulDropdowns2.classList.toggle("activeDrop")
 })
 
-dropdown_menu2.addEventListener("click", () =>{
+dropdown_menu2.addEventListener("click", () => {
     dropdonwBtn2.classList.toggle("activeBtn")
+})
+
+mobileMenu.addEventListener("click", () => {
+    menu.classList.remove("active")
 })
 
 // cardlar
@@ -109,7 +113,9 @@ card.forEach(item => {
     </div>
     <h3>${item.theProductName}</h3>
   `;
-
+    cardEl.addEventListener("click", () => {
+        window.location.href = "../html/category.html";
+    });
     section.appendChild(cardEl);
 });
 
@@ -198,20 +204,16 @@ btn.addEventListener("click", () => {
         if (!isDown) return; isDown = false; track.style.removeProperty('transition');
         if (Math.abs(dx) > threshold) step(dx < 0 ? 1 : -1); else update(); dx = 0;
     }
-
-
-    function start() { stop(); timer = setInterval(() => step(1), interval); }
-    function stop() { if (timer) clearInterval(timer); timer = null; }
-    autoplayToggle.addEventListener('change', () => autoplayToggle.checked ? start() : stop());
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', () => autoplayToggle.checked && start());
-
-
-    update();
-    if (autoplayToggle.checked) start();
-
-
-    window.sliderAPI = { go, next: () => step(1), prev: () => step(-1), pause: stop, play: start };
-
 })();
+
+const card2 = {
+    id: crypto.randomUUID(),
+    name: "Televizor"
+};
+
+localStorage.setItem("card", JSON.stringify(card));
+
+const savedCard = JSON.parse(localStorage.getItem("card"));
+console.log(savedCard.id, savedCard.name);
+
 
