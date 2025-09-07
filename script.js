@@ -103,6 +103,7 @@ mobileMenu.addEventListener("click", () => {
 })
 
 // cardlar
+// cardlar
 card.forEach(item => {
     const cardEl = document.createElement("div");
     cardEl.classList.add("cradSlider");
@@ -113,14 +114,12 @@ card.forEach(item => {
     </div>
     <h3>${item.theProductName}</h3>
   `;
-    cardEl.addEventListener("click", () => {
-        window.location.href = "../html/category.html";
-    });
-    section.appendChild(cardEl);
-});
 
-menuMobile.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    cardEl.addEventListener("click", () => {
+        window.location.href = `../html/category.html?img=${encodeURIComponent(item.productImg)}&name=${encodeURIComponent(item.theProductName)}`;
+    });
+
+    section.appendChild(cardEl);
 });
 
 
@@ -206,14 +205,16 @@ btn.addEventListener("click", () => {
     }
 })();
 
-const card2 = {
-    id: crypto.randomUUID(),
-    name: "Televizor"
-};
-
 localStorage.setItem("card", JSON.stringify(card));
 
 const savedCard = JSON.parse(localStorage.getItem("card"));
-console.log(savedCard.id, savedCard.name);
+
+
+console.log(savedCard[0].id, savedCard[0].theProductName);
+
+
+const selectedId = "shuIDniOling";
+const selectedCard = savedCard.find(item => item.id === selectedId);
+console.log(selectedCard.theProductName, selectedCard.productImg);
 
 

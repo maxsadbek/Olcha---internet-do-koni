@@ -5,11 +5,6 @@ const section = document.querySelector("#section");
 
 const product = JSON.parse(localStorage.getItem("id"));
 
-product.forEach(item => {
-    section.innerHTML =
-     `<h1>${item.theProductName}</h1>`;
-});
-
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
     { tag: "button", text: "Chegirmalar", class: "btn chgirma" },
@@ -22,57 +17,94 @@ const navItems = [
     { tag: "span", text: "Рус" },
 ];
 
-const card = [
+const cardImag = [
     {
-        id: crypto.randomUUID(),
-        theProductName: "Televizor,foto-video va audio",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/B1NA6mAiwsmrVapt6VbrdvPPIllRV2EnjtNEuUvSPhHoZ2beOWGv616dhaKj.png",
-
-    },
-    {
-        id: crypto.randomUUID(),
-        theProductName: "Noutbook,printer,  kompyuterlar",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/n4H7uKvN0pFwsYXSs66rsdUdHxGiRCWn8JVt9O0Qt1ecNl1fOEDJ7j0BHj81.png",
-
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Smartfon,telefon, gadjet, aksessuarlar",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/K83YTs4SqPeI3Ohx1lN0bDnbiV1Z9EnwZHMr2HsjIlDhmT48cBgn4C0Ve9Br.png",
-
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Maishiy texnika",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/yfGs0HUuX5wKnXwPbOyEswpZFzzGhmHdpptTriBTKm01HUxMqTBEg1QA2CQr.png",
-
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Barchasi oshxona uchun",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/eCJj0q3ixqzqS3xvZhnMSQnYC1SLTnLB475I5l5ltz6rxi9rUmYauATe5Pa6.png",
-
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Sport anjomlari",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/D1UNIE2gMBYHkx9XQl452O6I2jtQOpD4kvhOWQCtr9fuPliQWVSAkN9YXjiQ.png",
-    },
-    {
-        id: crypto.randomUUID(),
-        theProductName: "Go'zallik va salomatlik",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/Lio8FefcAG352o0hPeqHDkd7TVlr2NQ4ljQAQziRlTjWOz08RiB1fncFbe2D.png",
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Avto jihozlari",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/xrGNIS4zILNfb5qMXC0nvDLo09QuwdrdXYEKqn7UOEI9PndrjYR1BNX6CQbA.png",
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Barchasi ofis, uy va bog' uchun",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/ZiWkDeTfCnCNHDWZnu0xXtxwkZ6Qe3embHveXzJVRXfdnaJB5sRsnJiU22vS.png",
-    }, {
-        id: crypto.randomUUID(),
-        theProductName: "Bolalar uchun o'yinchoqlar va mahsulotlar",
-        productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/e6S4NLdIceYAv1zDvwHPVHFWSEMMgUxMwbOjThhsguSxVUKTY6yKbXvwOJ6M.png",
-    },
-
+        productIages: "https://olcha.uz/image/original/category_slider/cdn_1/2024-06-26/F7xjxetcSzEh5MX3EZWl6VnNnEbHJmbrI2S5WDmZCmJVPxJYBVxOtRRxfsfd.jpg",
+        theProductName: "This is TV img"
+    }
 ]
+
+const miniCard = [
+    {
+        img: "https://olcha.uz/image/150x150/category/qdVTBaQHAIBKWX7Zmtnqyt41UiGfCsBuQI7b2T33svLTTu40fF83RVO6u4Q4.png",
+        text: "Televizorlar"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/MFGlVLSgqFhWAAD20AG8rhl6bqpdxnPH4E4iRcu86AAI3BCelhntarOz1OP3.png",
+        text: "Audio"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/yw3vCbU0YmfBnMTOjLKSddHwCPWCfgqyQStWCEfPyi4G2jx5Uf61tYpvMXvC.png",
+        text: "Videotexnika"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/VHfLdXIi8WVvhYGxrhdQUVpA2N11hgJEcA4C8uf4sSk4EejpDg1Qhx2lslTF.png",
+        text: "Media Player"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/tChE7EcMi1DV853t4a54pGU2pZEiw42ELhvqz7lkOuq2E1O93Bwz2XNeslbc.png",
+        text: "Diktafonlar"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/v36bvXhA1ohp1Ln4w5ZzTA5sd1XZfifKjjFQ6b3q007hWS3TlyWEZYg0PzdZ.png",
+        text: "Foto, video"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/xQgtxsKDXISSlQ7jXuqLwYdSxKlJx5T8Q2atJyMBS7DJHwQ9xBVGBynxbwrm.",
+        text: "O'yin konsollari"
+    }, {
+        img: "https://olcha.uz/image/150x150/category/XlECBHaLlFkVoeUhCOeyEj7ajluhi08Ry80o97ynQHiiTFKHzH0qAdYaNntN.png",
+        text: "Kronshteynlar"
+    },
+]
+
+const wrapper = document.createElement("div");
+wrapper.className = "CardPArent";
+
+cardImag.forEach(item => {
+    const cardEl = document.createElement("div");
+    cardEl.classList.add("sectionCardParent");
+
+    cardEl.innerHTML = `
+    <div>
+      <img src="${item.productIages}" alt="${item.theProductName}">
+    </div>
+  `;
+
+    cardEl.addEventListener("click", () => {
+        window.location.href = "../html/category.html";
+    });
+
+    wrapper.appendChild(cardEl);
+});
+
+miniCard.forEach(item => {
+    const miniCardEl = document.createElement("div");
+    miniCardEl.classList.add("sectionCard");
+
+    miniCardEl.innerHTML = `
+    <div>
+      <img src="${item.img}" alt="${item.theProductName}">
+    </div>
+    <h3>${item.text}</h3>
+  `;
+
+    miniCardEl.addEventListener("click", () => {
+        window.location.href = "../html/category.html";
+    });
+
+    wrapper.appendChild(miniCardEl);
+});
+
+section.appendChild(wrapper);
+
+const selectedId = localStorage.getItem("selectedCardId");
+
+if (selectedId) {
+        const selectedCard = card.find(item => item.id === selectedId);
+
+    if (selectedCard) {
+        const section = document.querySelector("#section");
+        section.innerHTML = `
+            <img src="${selectedCard.productImg}" alt="${selectedCard.theProductName}">
+            <h1>${selectedCard.theProductName}</h1>
+        `;
+    }
+}
 
 // navbar
 const navbar = document.createElement("div");
