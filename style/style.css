@@ -232,7 +232,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.ulDropdown{
+.ulDropdown {
     display: none;
 }
 
@@ -250,7 +250,7 @@ body {
     justify-content: space-between;
 }
 
-.dropdown_menu2{
+.dropdown_menu2 {
     display: none;
 }
 
@@ -366,7 +366,7 @@ body {
     color: #d4002a;
 }
 
-.ul i{
+.ul i {
     display: none;
 }
 
@@ -375,7 +375,7 @@ body {
     width: 40px;
 }
 
-#mobileMenu{
+#mobileMenu {
     display: none;
 }
 
@@ -669,137 +669,219 @@ i {
     object-fit: cover;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 10px;
-    background-color: #d4002a;
-    padding: 20px;
-    width: 100%;
-    border-radius: 12px;
-    height: auto;
+
+.mobile {
+    display: none;
 }
 
-.div1 {
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
-    background-color: #fff;
+.gridParent {
     display: flex;
-    padding: 20px;
-    border-radius: 15px;
-    width: 440px;
-    height: 280px;
-    cursor: pointer;
-}
-
-.div1 .divBox1 {
-    display: flex;
-}
-
-.div1>div h3 {
-    font-size: 16px;
-    width: 190px;
-    font-weight: 400;
-}
-
-.div1>div i {
-    margin-top: -6px;
-    font-size: 30px;
-    margin-left: -8px;
-    color: #828997;
-}
-
-.div1 img {
-    width: 200px;
-    height: 200px;
-    margin-left: -2.5rem;
-    position: relative;
-}
-
-.div1 .btn3 {
-    z-index: 111;
-    height: 22px;
-    padding: 3px;
-    background-color: #d4002a;
-    border-radius: 5px;
-    color: #fff;
-    border: none;
-}
-
-.price {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background-color: #d4002a;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 20px;
 }
 
-.price p {
+.GridBox {
+    border-radius: 20px;
+}
+
+.GridBox img {
+    width: 160px;
+    object-fit: cover;
+}
+
+.gridChild {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-bottom: 50px;
+}
+
+.GridBox button {
+    padding: 3px;
+    font-size: 16px;
+    background-color: #d4002a;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.gridChild button {
+    margin-right: -3rem;
+}
+
+.gridChild>div {
+    z-index: 111;
+}
+
+.gridBOx2 h3 {
+    color: #d4002a;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.gridMini {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.gridPhone {
+    margin-bottom: 2rem;
+}
+
+.gridPhone p {
+    font-size: 16px;
+}
+
+
+.gridPhone i {
+    font-size: 20px;
+    color: #a9a0a0;
+}
+
+.gridMini2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gridMini2 p {
+    font-size: 15px;
     color: #828997;
     text-decoration-line: line-through;
 }
 
-.price i {
-    font-size: 10px;
+.gridMini2 i {
+    font-size: 20px;
+    color: #888;
+    margin-bottom: 1rem;
 }
 
-.newPrice {
-    margin-top: 5px;
+.c2 {
+    margin-top: 1rem;
 }
 
-.newPrice h2 {
-    color: #d4002a;
-    font-weight: 600;
-    font-size: 19px;
-}
-
-.newPrice p {
+.gridChild .math {
     margin-top: 10px;
-    padding: 6px;
-    width: 130px;
-    font-size: 12px;
-    background-color: rgb(255, 213, 0);
+    background-color: yellow;
+    font-size: 14px;
+}
+
+.grid3 {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.grid3 img {
+    width: 200px;
+    display: block;
+}
+
+.grid3 .chegirma button {
+    padding: 5px;
+    background-color: #d4002a;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+
+}
+
+.grid3 {
+    position: relative;
+    display: inline-block;
+}
+
+.grid3 h2{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.grid3 h3{
+    margin-top: 0.7rem;
+    font-size: 19px;
+    color: #d4002a;
+}
+
+.grid3 p{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #1212128d;
+    text-decoration-line: line-through;
+    margin-bottom: 7px;
+}
+
+.grid3 mark{
+    padding: 5px;
+    background-color: rgb(255, 225, 0);
+    font-size: 14px;
     border-radius: 5px;
 }
 
-.div2 {
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
-    grid-column-start: 1;
-    grid-row-start: 5;
-
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #d0cfcf;
+    color: #fff;
+    padding: 7px;
+    border-radius: 50%;
 }
 
-.div3 {
-    grid-column: span 2 / span 2;
-    grid-row: span 8 / span 8;
-    grid-column-start: 4;
-    grid-row-start: 1;
+.heart.activs{
+    color: #d4002a;
+    border: #fff;
 }
 
-.div4 {
-    grid-column: span 2 / span 2;
-    grid-row: span 8 / span 8;
-    grid-column-start: 6;
-    grid-row-start: 1;
+.price {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #d0cfcf;
+    color: #fff;
+    padding: 7px;
+    border-radius: 50%;
 }
 
-.div5 {
-    grid-column: span 2 / span 2;
-    grid-row: span 8 / span 8;
-    grid-column-start: 8;
-    grid-row-start: 1;
+.gridBtn {
+    margin-top: 0.8rem;
 }
 
-.div6 {
-    grid-column: span 2 / span 2;
-    grid-row: span 8 / span 8;
-    grid-column-start: 10;
-    grid-row-start: 1;
+.btn1 {
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 10px;
+    margin-right: 5px;
+    transition: all 0.2s ease-in-out;
 }
 
-.mobile {
-    display: none;
+.btn1:hover {
+    background-color: #1212120e;
+}
+
+.btn3 {
+    padding: 12px 17px;
+    font-size: 17px;
+    background-color: transparent;
+    color: #d4002a;
+    border: 2px solid #d4002a;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn3:hover {
+    background-color: #d4002a10;
 }
 
 @media screen and (max-width:600px) {
@@ -1055,7 +1137,7 @@ i {
         margin-bottom: 1rem;
     }
 
-    .dropdown_menu2{
+    .dropdown_menu2 {
         display: flex;
         align-items: center;
         margin-top: 1.5rem;
@@ -1063,26 +1145,26 @@ i {
         display: none;
     }
 
-    .dropdown_menu2.activeBtn{
+    .dropdown_menu2.activeBtn {
         display: block;
     }
 
-    .dropdown_menu2 h2{
+    .dropdown_menu2 h2 {
         font-size: 15px;
         margin-left: 1rem;
     }
 
-    .dropdown_menu2 img{
+    .dropdown_menu2 img {
         width: 40px;
     }
 
-    #mobileMenu{
+    #mobileMenu {
         display: flex;
         justify-content: space-between;
         width: 132%;
     }
 
-    #mobileMenu i{
+    #mobileMenu i {
         border: 1px solid #000;
         border-radius: 100%;
         padding: 3px;
@@ -1097,14 +1179,14 @@ i {
         gap: 10px;
     }
 
-    .navMenu i{
+    .navMenu i {
         font-size: 25px;
         border: 2px solid #000;
         padding: 5px;
         border-radius: 13px;
     }
 
-    .navMenu input{
+    .navMenu input {
         width: 350px;
         padding: 10px;
         background-color: #f4f4f4;
@@ -1114,7 +1196,7 @@ i {
         border-radius: 14px;
     }
 
-     .menuBox img {
+    .menuBox img {
         width: 30px;
     }
 
@@ -1221,7 +1303,7 @@ i {
         flex-wrap: wrap;
     }
 
-    .ul li{
+    .ul li {
         position: relative;
         margin-bottom: 20px;
     }
@@ -1241,7 +1323,7 @@ i {
         color: #d4002a;
     }
 
-    .ulDropdown{
+    .ulDropdown {
         display: none;
         font-size: 17px;
         line-height: 2.4;
@@ -1251,11 +1333,11 @@ i {
         margin-bottom: 1rem;
     }
 
-    .ulDropdown.activeDrop{
+    .ulDropdown.activeDrop {
         display: inline-block;
     }
 
-    .ul i{
+    .ul i {
         display: block;
         position: absolute;
         top: 1%;
@@ -1586,7 +1668,7 @@ i {
         color: #d4002a;
     }
 
-    .img img{
+    .img img {
         width: 100%;
         transition: all 0.23s ease-in-out;
     }
@@ -1597,4 +1679,3 @@ i {
     }
 
 }
-

@@ -18,6 +18,7 @@ const dropdown_menu2 = document.querySelector("#dropdown_menu")
 const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
 const mobileMenu = document.querySelector("#closeMobile")
 let mobileMenuBtn = document.querySelector("#mobileMenu")
+let heart = document.querySelector(".heart")
 
 // navbar
 const navItems = [
@@ -100,6 +101,95 @@ const card = [
     },
 
 ]
+
+const products = [
+    {
+        id: "p1",
+        type: "gridChild",
+        badge: "-18%",
+        img: "https://olcha.uz/image/700x700/products/fvj1vT8wb3D3Fn9eG654PL9rKdvSnFmoYcaYlI4TR70VQbfxowBvzrEN05hy.jpg",
+        title: "Redmi 13C (ikkinchi qo'l)",
+        oldPrice: "1 742 000 so'm",
+        price: "1 428 440 so'm",
+        installment: "168 000 so'm x 12oy"
+    },
+    {
+        id: "p2",
+        type: "gridChild",
+        badge: "-18%",
+        img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/ET18UK96Uz4hpSuE9xUIQoKTcoVeT9dXqkTcdOROl4dWqlJhRi3bGhmbpD1K.jpg",
+        title: "Huawei nova 11 8/256",
+        oldPrice: "1 742 000 so'm",
+        price: "1 428 440 so'm",
+        installment: "168 000 so'm x 12oy",
+        extraClass: "c2"
+    },
+    {
+        id: "p3",
+        type: "grid3",
+        badge: "-17%",
+        img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/t8jAi1x9RKa6pWGEajlnj6qIYjxEdGn8pgTAxGv0POcJeATULnwVyqkUKzw5.jpg",
+        title: "Huawei nova 11 8/256 GB Green",
+        price: "3 240 000 so'm",
+        oldPrice: "3 900 000 so'm",
+        installment: "380 000 so'm x 12oy"
+    },
+    {
+        id: "p4",
+        type: "grid3",
+        badge: "-17%",
+        img: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-09-05/vq48GipBCKRQuYab0CmVscCkz94mMPUk3q3uowg9XUN18dIOXKXVK2T2ymTa.jpg",
+        title: "Huawei nova 11 8/256 GB Green",
+        price: "3 240 000 so'm",
+        oldPrice: "3 900 000 so'm",
+        installment: "380 000 so'm x 12oy"
+    },
+    {
+        id: "p5",
+        type: "grid3",
+        badge: "-17%",
+        img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/t8jAi1x9RKa6pWGEajlnj6qIYjxEdGn8pgTAxGv0POcJeATULnwVyqkUKzw5.jpg",
+        title: "Huawei nova 11 8/256 GB Green",
+        price: "3 240 000 so'm",
+        oldPrice: "3 900 000 so'm",
+        installment: "380 000 so'm x 12oy"
+    },
+    {
+        id: "p6",
+        type: "grid3",
+        badge: "-17%",
+        img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/t8jAi1x9RKa6pWGEajlnj6qIYjxEdGn8pgTAxGv0POcJeATULnwVyqkUKzw5.jpg",
+        title: "Huawei nova 11 8/256 GB Green",
+        price: "3 240 000 so'm",
+        oldPrice: "3 900 000 so'm",
+        installment: "380 000 so'm x 12oy"
+    }
+];
+
+
+// heart.addEventListener("click", () =>{
+//     heart.classList.add("activs")
+// })
+
+document.addEventListener("click", (e) => {
+    if (e.target.closest(".heart")) {
+        const heart = e.target.closest(".heart");
+        const icon = heart.querySelector("i");
+
+        heart.classList.toggle("activs");
+
+        if (icon.classList.contains("ri-heart-line")) {
+            icon.classList.remove("ri-heart-line");
+            icon.classList.add("ri-heart-fill");
+        } else {
+            icon.classList.remove("ri-heart-fill");
+            icon.classList.add("ri-heart-line");
+        }
+    }
+});
+
+
+
 language.addEventListener("click", () => {
     rus.classList.toggle("active")
 })
@@ -121,7 +211,7 @@ menuMobile.addEventListener("click", () => {
     btn.classList.toggle("open");
 })
 
-mobileMenu.addEventListener("click", () =>{
+mobileMenu.addEventListener("click", () => {
     menu.classList.remove("active")
     btn.classList.remove("open");
 })
@@ -171,6 +261,97 @@ btn.addEventListener("click", () => {
     btn.classList.toggle("open");
 });
 
+function createGridBox(items) {
+    const box = document.createElement("div");
+    box.classList.add("GridBox");
+
+    items.forEach(item => {
+        const child = document.createElement("div");
+        child.classList.add("gridChild");
+        if (item.extraClass) child.classList.add(item.extraClass);
+
+        child.innerHTML = `
+          <div>
+            <button>${item.badge}</button>
+          </div>
+          <img src="${item.img}" alt="product image">
+          <div class="gridBOx2">
+            <div class="gridMini gridPhone">
+              <p>${item.title}</p>
+              <i class="ri-heart-2-line"></i>
+            </div>
+            <div class="gridMini2">
+              <p>${item.oldPrice}</p>
+              <i class="ri-bar-chart-line"></i>
+            </div>
+            <h3>${item.price}</h3>
+            <p class="math">${item.installment}</p>
+          </div>
+        `;
+
+        child.addEventListener("click", () => goToProduct(item.id));
+
+        box.appendChild(child);
+    });
+
+    return box;
+}
+
+
+function createGrid3(item) {
+    const card = document.createElement("div");
+    card.classList.add("grid3");
+
+    card.innerHTML = `
+    <div class="chegirma">
+      <button>${item.badge}</button>
+    </div>
+    <img src="${item.img}" alt="${item.title}">
+    <div class="heart">
+      <i class="ri-heart-line"></i>
+    </div>
+    <div class="price">
+      <i class="ri-bar-chart-line"></i>
+    </div>
+    <h2>${item.title}</h2>
+    <h3>${item.price}</h3>
+    <p>${item.oldPrice || ""}</p>
+    <mark>${item.installment || ""}</mark>
+    <div class="gridBtn">
+      <button class="btn1"><i class="ri-shopping-cart-line"></i></button>
+      <button class="btn3">Muddatli to'lov</button>
+    </div>
+  `;
+    card.addEventListener("click", () => goToProduct(item.id));
+
+    return card;
+}
+
+function renderProducts(containerSelector = ".container.gridParent") {
+    const container = document.querySelector(containerSelector);
+    if (!container) {
+        console.error("Container topilmadi:", containerSelector);
+        return;
+    }
+
+    container.innerHTML = "";
+
+    const firstTwo = products.filter(p => p.type === "gridChild").slice(0, 2);
+    if (firstTwo.length) {
+        const gridBox = createGridBox(firstTwo);
+        container.appendChild(gridBox);
+    }
+
+    const rest = products.filter(p => p.type === "grid3");
+    rest.forEach(item => {
+        const el = createGrid3(item);
+        container.appendChild(el);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderProducts();
+});
 
 // slider
 (function () {
@@ -242,3 +423,7 @@ const selectedId = "shuIDniOling";
 const selectedCard = savedCard.find(item => item.id === selectedId);
 
 
+function goToProduct(id) {
+    console.log("Go to:", id);
+    window.location.href = "html/product_details.html?id=" + id;
+}
