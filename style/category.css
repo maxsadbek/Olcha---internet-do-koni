@@ -60,24 +60,114 @@
     transition: all 0.23s ease-in-out;
 }
 
-.sectionCard:hover{
+.sectionCard:hover {
     color: #c2012ecd;
 }
 
 .sectionCard img {
-    background: linear-gradient(135deg,rgb(0, 255,
-            119), blueviolet, green, aqua);
+    background: linear-gradient(135deg, rgb(0, 255,
+                119), blueviolet, green, aqua);
     padding: 20px;
     border-radius: 20px;
     width: 200px;
     transition: all 0.3s ease-in-out;
 }
 
-.sectionCard img:hover{
+.sectionCard img:hover {
     transform: scale(1.02);
 }
 
-.sectionCard h2{
+.sectionCard h2 {
     font-weight: 200;
     margin-top: 10px;
+}
+
+@media screen and (max-width:600px) {
+    #section {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .text h1 {
+        margin-top: 3rem;
+        font-size: 23px;
+        margin-bottom: 1.9rem;
+    }
+
+    .sectionBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sectionBox h3 {
+        margin-top: 1rem;
+        font-size: 20px;
+        margin-bottom: 1rem;
+        width: 340px;
+        cursor: pointer;
+        transition: all 0.23s ease-in-out;
+    }
+
+    .sectionBox h3:hover {
+        color: #c2012ecd;
+    }
+
+    .sectionBox p {
+        margin-top: 1rem;
+        font-size: 16px;
+        color: #999;
+        width: 340px;
+        cursor: pointer;
+        transition: all 0.13s ease-in-out;
+    }
+
+    .sectionBox p:hover {
+        color: #ce022bcd;
+    }
+
+    .sectionCardParent img {
+        width: 100%;
+        border-radius: 20px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .CardPArent {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sectionCard {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        overflow: hidden;
+        transition: all 0.23s ease-in-out;
+    }
+
+    .sectionCard:hover {
+        color: #c2012ecd;
+    }
+
+    .sectionCard img {
+        background: linear-gradient(135deg, rgb(0, 255,
+                    119), blueviolet, green, aqua);
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sectionCard img:hover {
+        transform: scale(1.02);
+    }
+
+    .sectionCard h2 {
+        font-weight: 200;
+        margin-top: 10px;
+    }
 }
