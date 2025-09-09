@@ -18,7 +18,7 @@ const dropdown_menu2 = document.querySelector("#dropdown_menu")
 const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
 const mobileMenu = document.querySelector("#closeMobile")
 let mobileMenuBtn = document.querySelector("#mobileMenu")
-let heart = document.querySelector(".heart")
+let heart = document.querySelector(".heart i")
 
 // navbar
 const navItems = [
@@ -178,15 +178,11 @@ document.addEventListener("click", (e) => {
 
         heart.classList.toggle("activs");
 
-        if (icon.classList.contains("ri-heart-line")) {
-            icon.classList.remove("ri-heart-line");
-            icon.classList.add("ri-heart-fill");
-        } else {
-            icon.classList.remove("ri-heart-fill");
-            icon.classList.add("ri-heart-line");
-        }
+        icon.classList.toggle("ri-heart-line");
+        icon.classList.toggle("ri-heart-fill");
     }
 });
+
 
 
 
@@ -287,9 +283,12 @@ function createGridBox(items) {
             <h3>${item.price}</h3>
             <p class="math">${item.installment}</p>
           </div>
+          <div class="gridBtn">
+        <button></button>
+          </div>
         `;
 
-        child.addEventListener("click", () => goToProduct(item.id));
+
 
         box.appendChild(child);
     });
@@ -297,35 +296,34 @@ function createGridBox(items) {
     return box;
 }
 
-
 function createGrid3(item) {
     const card = document.createElement("div");
     card.classList.add("grid3");
 
     card.innerHTML = `
-    <div class="chegirma">
-      <button>${item.badge}</button>
-    </div>
-    <img src="${item.img}" alt="${item.title}">
-    <div class="heart">
-      <i class="ri-heart-line"></i>
-    </div>
-    <div class="price">
-      <i class="ri-bar-chart-line"></i>
-    </div>
-    <h2>${item.title}</h2>
-    <h3>${item.price}</h3>
-    <p>${item.oldPrice || ""}</p>
-    <mark>${item.installment || ""}</mark>
-    <div class="gridBtn">
-      <button class="btn1"><i class="ri-shopping-cart-line"></i></button>
-      <button class="btn3">Muddatli to'lov</button>
-    </div>
-  `;
-    card.addEventListener("click", () => goToProduct(item.id));
+      <i class="heart ri-heart-line"></i>
+      <span class="price">${item.badge}</span>
+      <img src="${item.img}" alt="product image">
+      <div class="gridBOx2">
+        <div class="gridMini gridPhone">
+          <p>${item.title}</p>
+        </div>
+        <div class="gridMini2">
+        <p>${item.oldPrice}</p>
+        <i class="ri-bar-chart-line tablitsa"></i>
+        </div>
+        <h3>${item.price}</h3>
+        <p class="math">${item.installment}</p>
+      </div>
+    `;
+
+
 
     return card;
 }
+
+
+
 
 function renderProducts(containerSelector = ".container.gridParent") {
     const container = document.querySelector(containerSelector);
@@ -421,7 +419,6 @@ console.log(savedCard[0].id, savedCard[0].theProductName);
 
 const selectedId = "shuIDniOling";
 const selectedCard = savedCard.find(item => item.id === selectedId);
-
 
 function goToProduct(id) {
     console.log("Go to:", id);

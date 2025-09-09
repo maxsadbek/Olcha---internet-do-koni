@@ -1,14 +1,14 @@
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
-const product = products.find(p => p.id === productId);
-
 const container = document.querySelector(".gridParent");
 
+const product = products.find(p => p.id === productId);
+
 if (!product) {
-    container.innerHTML = "<h2>Mahsulot topilmadi 😢</h2>";
+  container.innerHTML = "<h2>Mahsulot topilmadi 😢</h2>";
 } else {
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="product-detail">
       <img src="${product.img}" alt="${product.title}">
       <h1>${product.title}</h1>

@@ -780,6 +780,7 @@ i {
     background-color: #fff;
     padding: 20px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .grid3 img {
@@ -801,26 +802,25 @@ i {
     display: inline-block;
 }
 
-.grid3 h2{
+.grid3 h2 {
     font-size: 16px;
     font-weight: 300;
 }
 
-.grid3 h3{
+.grid3 h3 {
     margin-top: 0.7rem;
     font-size: 19px;
     color: #d4002a;
 }
 
-.grid3 p{
+.grid3 p {
     margin-top: 10px;
     font-size: 16px;
     color: #1212128d;
-    text-decoration-line: line-through;
     margin-bottom: 7px;
 }
 
-.grid3 mark{
+.grid3 mark {
     padding: 5px;
     background-color: rgb(255, 225, 0);
     font-size: 14px;
@@ -837,12 +837,27 @@ i {
     border-radius: 50%;
 }
 
-.heart.activs{
+.heart.activs {
     color: #d4002a;
     border: #fff;
 }
 
 .price {
+    background-color: #d4002a;
+    color: #fff;
+    padding: 7px;
+    top: 10px;
+    left: 6px;
+    border-radius: 7px;
+    z-index: 111;
+    position: absolute;
+}
+
+.gridBtn {
+    margin-top: 0.8rem;
+}
+
+.tablitsa {
     position: absolute;
     top: 50px;
     right: 10px;
@@ -850,10 +865,6 @@ i {
     color: #fff;
     padding: 7px;
     border-radius: 50%;
-}
-
-.gridBtn {
-    margin-top: 0.8rem;
 }
 
 .btn1 {
