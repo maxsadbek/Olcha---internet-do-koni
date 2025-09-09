@@ -166,25 +166,109 @@ const products = [
     }
 ];
 
-
-// heart.addEventListener("click", () =>{
-//     heart.classList.add("activs")
-// })
+const cards = [
+    {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/v7EZI19OSbVEPuFg3F3xS5iRIjNAjnYsATd8HmHQKrMXvIU4RpwlKiISLVd8.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Xiaomi Redmi Note 14 Pro",
+        cardPrice: "3 532 000 so'm",
+        cardMonth: "414 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2024-11-28/PK439EIN2oVAvX6ezVPJYOJF8X5v1kzGlRvGhIRy7Nwht9h7qbyRFx89dDVn.png",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Apple IPhone 15 Pro Max",
+        cardPrice: "16 295 000 so'm",
+        cardMonth: "1 909 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-03-11/RX3I5bViXa5VL5q2I3h4UlHmlUnianu3RJLG0H99inmN63k2CJ0pxJX168UZ.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Sony PlayStation PS5 Digital Edition 1 TB (from U.A.E)",
+        cardPrice: "6 365 000 so'm",
+        cardMonth: "746 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/OY5ohuZDkmuAxX40VGTlmr5cDP5HAR64EKCzNmOtXJqdA6rv9N7QkDmCghj9.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Xiaomi Redmi Note 14",
+        cardPrice: "2 319 000 so'm",
+        cardMonth: "272 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/97ckzjNsRYY2xIFDrv7C6SYqD84nq4iXBjwlg2ILGVVgjiOYkCcu0zuc793S.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Samsung Galaxy A55",
+        cardPrice: "4 553 800 so'm",
+        cardMonth: "534 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/iupANfMv7Z23H8WOmxokqdIP1xRaJpfex9wn7dBo6Rx7D0LNfJOo5umxEeHV.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Xiaomi Redmi 14C",
+        cardPrice: "1 522 000 so'm",
+        cardMonth: "179 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-04-23/ABacr2NI4l5hkxlswKgANn8aBCZ0oU1cvb8eYW4AX5GS7AxrmJP4NbSVYAyi.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Apple IPhone 16Pro Max",
+        cardPrice: "18 444 000 so'm",
+        cardMonth: "2 160 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/aC7oCEK8puWMKfaKeSLXA1lYrhL4YzMZlielrLpFr7CEjHvtsg5GLto7Q4CS.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Samsung Galaxy A16",
+        cardPrice: "2 199 000 so'm",
+        cardMonth: "258 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/pmb1oRujJ6jborxYlx6LMVTAey54qGYSQWrae3oUN9BKYccclwfX5MZkGkjj.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Samsung Galaxy A06",
+        cardPrice: "1 865 000 so'm",
+        cardMonth: "219 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    }, {
+        cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/v7EZI19OSbVEPuFg3F3xS5iRIjNAjnYsATd8HmHQKrMXvIU4RpwlKiISLVd8.jpg",
+        cradHeart: "<i class='ri- heart - line'></i>",
+        cardTables: "<i class='ri- bar - chart - line tablitsa'></i>",
+        cardText: "Xiaomi Redmi Note 14 Pro",
+        cardPrice: "3 532 000 so'm",
+        cardMonth: "414 000 so'm x 12 oy",
+        cardBtn: "<i class='ri- heart - line heart'></i>",
+        cardBtn2: "Muddatli to'lov"
+    },
+]
 
 document.addEventListener("click", (e) => {
     if (e.target.closest(".heart")) {
         const heart = e.target.closest(".heart");
         const icon = heart.querySelector("i");
-
         heart.classList.toggle("activs");
-
-        icon.classList.toggle("ri-heart-line");
-        icon.classList.toggle("ri-heart-fill");
+        heart.classList.remove("ri-heart -line");
+        heart.classList.add("ri-heart-fill");
     }
 });
-
-
-
 
 language.addEventListener("click", () => {
     rus.classList.toggle("active")
@@ -283,9 +367,7 @@ function createGridBox(items) {
             <h3>${item.price}</h3>
             <p class="math">${item.installment}</p>
           </div>
-          <div class="gridBtn">
-        <button></button>
-          </div>
+
         `;
 
 
@@ -315,6 +397,10 @@ function createGrid3(item) {
         <h3>${item.price}</h3>
         <p class="math">${item.installment}</p>
       </div>
+            <div class="gridBtn">
+                <button class="btn1"><i class="ri-shopping-cart-line"></i></button>
+                <a href="../html/product_details.html"><button class="btn3">Muddatli to'lov</button></a>
+          </div>
     `;
 
 
@@ -322,8 +408,31 @@ function createGrid3(item) {
     return card;
 }
 
+function creatCard(item) {
+    const cardGrid = document.createElement("div");
+    cardGrid.classList.add("cardDiv");
 
-
+    cardGrid.innerHTML = `
+           <div class="cardImg">
+                <img src="${item.cardImg}"
+                    alt="this is Xiaomi img">
+                <i class="ri-heart-line heart">${item.cradHeart}</i>
+                <i class="ri-bar-chart-line tablitsa">${item.cardTables}</i>
+            </div>
+            <h2>${item.cardText}</h2>
+            <br>
+            <p>${item.cardPrice}</p>
+            <mark>414 000 so'm x 12 oy</mark>
+            <br>
+            <br>
+            <br>
+            <div class="cardBtn">
+                <button class="btn1"><i class="ri-shopping-cart-line"></i></button>
+                <button class="btn3">Muddatli to'lov</button>
+            </div>
+        </div>
+    `
+}
 
 function renderProducts(containerSelector = ".container.gridParent") {
     const container = document.querySelector(containerSelector);

@@ -675,6 +675,7 @@ i {
 }
 
 .gridParent {
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -893,6 +894,50 @@ i {
 
 .btn3:hover {
     background-color: #d4002a10;
+}
+
+.cradSection {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 12px;
+}
+
+.cardDiv {
+    width: 280px;
+    height: auto;
+    background-color: #8a93a62e;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.cardDiv h2 {
+    margin-top: 1rem;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.cardDiv p {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cardDiv mark {
+    padding: 5px;
+    background-color: rgb(255, 238, 0);
+    font-size: 13px;
+    border-radius: 7px;
+}
+
+.cardImg img {
+    margin-left: 0.7rem;
+    width: 220px;
+    border-radius: 20px;
 }
 
 @media screen and (max-width:600px) {
@@ -1689,4 +1734,47 @@ i {
         object-fit: cover;
     }
 
+    .cradSection {
+        margin-top: 3rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 12px;
+    }
+
+    .cardDiv {
+        width: 100%;
+        height: auto;
+        background-color: #8a93a62e;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cardDiv h2 {
+        margin-top: 1rem;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .cardDiv p {
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .cardDiv mark {
+        padding: 5px;
+        background-color: rgb(255, 238, 0);
+        font-size: 13px;
+        border-radius: 7px;
+    }
+
+    .cardImg img {
+        margin-left: 0rem;
+        width: 100%;
+        border-radius: 20px;
+    }
 }
