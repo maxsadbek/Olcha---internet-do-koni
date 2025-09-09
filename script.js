@@ -19,6 +19,7 @@ const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
 const mobileMenu = document.querySelector("#closeMobile")
 let mobileMenuBtn = document.querySelector("#mobileMenu")
 let heart = document.querySelector(".heart i")
+let cradSection = document.querySelector(".cradSection")
 
 // navbar
 const navItems = [
@@ -266,7 +267,7 @@ document.addEventListener("click", (e) => {
         const icon = heart.querySelector("i");
         heart.classList.toggle("activs");
         heart.classList.remove("ri-heart -line");
-        heart.classList.add("ri-heart-fill");
+        heart.classList.toggle("ri-heart-fill");
     }
 });
 
@@ -409,11 +410,11 @@ function createGrid3(item) {
 }
 
 function creatCard(item) {
-    const cardGrid = document.createElement("div");
+    const cardGrid = document.createAttribute("div");
     cardGrid.classList.add("cardDiv");
-
     cardGrid.innerHTML = `
-           <div class="cardImg">
+          <div class="cardDiv" id="cardDivs">
+            <div class="cardImg">
                 <img src="${item.cardImg}"
                     alt="this is Xiaomi img">
                 <i class="ri-heart-line heart">${item.cradHeart}</i>
@@ -422,7 +423,7 @@ function creatCard(item) {
             <h2>${item.cardText}</h2>
             <br>
             <p>${item.cardPrice}</p>
-            <mark>414 000 so'm x 12 oy</mark>
+            <mark>${item.cardMonth}</mark>
             <br>
             <br>
             <br>
@@ -431,8 +432,10 @@ function creatCard(item) {
                 <button class="btn3">Muddatli to'lov</button>
             </div>
         </div>
-    `
+    `;
+    section.appendChild(cardGrid)
 }
+
 
 function renderProducts(containerSelector = ".container.gridParent") {
     const container = document.querySelector(containerSelector);
