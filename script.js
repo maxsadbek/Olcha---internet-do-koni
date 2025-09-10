@@ -551,3 +551,7 @@ function goToProduct(id) {
 }
 
 console.log(localStorage.getItem("selectedProduct"));
+
+setTimeout(() => {
+    document.querySelector(".loader").style.display = "none";
+}, 1000);
