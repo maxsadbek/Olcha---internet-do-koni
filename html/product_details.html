@@ -7,6 +7,8 @@
     <title>Product (ikkinchi qo'l)</title>
     <!-- product css -->
     <link rel="stylesheet" href="./../style/product.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../style/style.css">
     <!-- remix icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
         integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
@@ -16,30 +18,184 @@
 </head>
 
 <body>
-<body>
-    <div class="product-details">
-        <img class="product-img" src="" alt="Product image">
-        <h2 class="product-title"></h2>
-        <p class="product-price"></p>
-        <p class="product-month"></p>
-    </div>
+    <section class="hero container">
+        <i class="ri-phone-line phone2"></i>
+        <a href="../index.html"><img src="../img/png/plus.lRzD4Jf7.png" alt="this is olcha logo"></a>
+        <div class="language">
+            <h3>O'z</h3>
+            <div id="rus">
+                <h3>Рус</h3>
+                <h3>English</h3>
+            </div>
+        </div>
+        <div class="heroBtn">
+            <button id="menu-btn">
+                <i class="ri-close-large-fill close"></i>
+                <i class="ri-menu-line menuBtn"></i> Katalog
+            </button>
+            <div class="menu" id="menu">
+                <div class="menuFlex">
+                    <div id="mobileMenu">
+                        <h3>Kategoriyalar</h3>
+                        <i class="ri-close-line" id="closeMobile"></i>
+                    </div>
+                    <div class="dropdown" id="dropdown_menu">
+                        <div class="menuBox">
+                            <div>
+                                <img src="../img/svg/eco-products-logo.svg" alt="">
+                                <h2>Olcha Market</h2>
+                            </div>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </div>
+                        <!-- <div class="dropdown2" id="dropdonwBtn2">
+                                    <div class="dropdown_menu2">
+                                        <img src="./img/svg/nasiya-logo.svg" alt="">
+                                        <h2>Olcha nasiya</h2>
+                                    </div>
+                                    <div class="dropdown_menu2">
+                                        <img src="./img/svg/invest-logo.svg" alt="">
+                                        <h2>Olcha invest</h2>
+                                    </div>
+                                    <div class="dropdown_menu2">
+                                        <img src="./img/svg/pay-logo.svg" alt="">
+                                        <h2>Olcha ERP</h2>
+                                    </div>
+                                    <div class="dropdown_menu2">
+                                        <img src="./img/svg/b2b-logo.svg" alt="">
+                                        <h2>Olcha B2B</h2>
+                                    </div>
+                                </div> -->
 
-    <script>
-        const product = JSON.parse(localStorage.getItem("selectedProduct"));
-        if (product) {
-            console.log("Mahsulot tafsilotlari:", product);
+                    </div>
+                    <ul class="ul">
+                        <div class="ulFlex">
+                            <li><a href="#">Televizor, foto-video va audio</a><i class="ri-arrow-down-s-line"
+                                    id="dropdownIcon"></i>
+                        </div>
+                        </li>
+                        <div class="ulDropdown" id="ulDropdowns">
+                            <p>Televizor</p>
+                            <p>Audio</p>
+                            <p>Videotexnika</p>
+                            <p>Media Player</p>
+                            <p>Diktafon</p>
+                            <p>Foto, Video</p>
+                            <p>O'yin konsoli</p>
+                            <p>Kronshteynlar</p>
+                        </div>
+                        <div class="ulFlex">
+                            <li><a href="#">Noutbuk, printer, kompyuterlar</a><i class="ri-arrow-down-s-line"
+                                    id="dropdownIcon2"></i></li>
+                        </div>
+                        <div class="ulDropdown" id="ulDropdowns2">
+                            <p>Noutbooklar</p>
+                            <p>Monitorlar</p>
+                            <p>Kompyuter qurilmalari</p>
+                            <p>Ofis jihozlari</p>
+                            <p>Noutbook uchun sumka va ryuksaglar</p>
+                            <p>Tizim uskunalari</p>
+                            <p>Monoblok</p>
+                            <p>Proektorlar</p>
+                            <p>Stol usti kompyuterlar</p>
+                            <p>Monitor uchun kronshteynlar va tagkursilar</p>
+                            <p>Videogaolish</p>
+                            <p>Lamiator</p>
+                            <p>Boshqa uskunalar</p>
+                        </div>
 
-            document.querySelector(".product-title").textContent = product.cardText;
-            document.querySelector(".product-img").src = product.cardImg;
-            document.querySelector(".product-price").textContent = product.cardPrice;
-            document.querySelector(".product-month").textContent = product.cardMonth;
-        } else {
-            document.body.innerHTML = "<h3>Mahsulot topilmadi ❌</h3>";
-        }
-    </script>
-</body>
+                        <li><a href="#">Barchasi oshxona uchun</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Sport anjomlari</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Go‘zallik va salomatlik</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Televizor, foto-video va audio</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Noutbuk, printer, kompyuterlar</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Smartfon, telefon, gadjet, <span>aksessuarlar</span><i
+                                    class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a href="#">Maishiy texnika</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Barchasi oshxona uchun</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Sport anjomlari</a><i class="ri-arrow-down-s-line"></i></li>
+                        <li><a href="#">Go‘zallik va salomatlik</a><i class="ri-arrow-down-s-line"></i></li>
+                    </ul>
+                </div>
+                <div class="menuFlex2">
+                    <div>
+                        <div class="menuDiv">
+                            <h3>Telivizor</h3>
+                            <p>Samsung</p>
+                            <p>Sony</p>
+                            <p>Artel</p>
+                            <p>LG</p>
+                            <p>Shivaki</p>
+                            <p>Vesta</p>
+                            <p>Premier</p>
+                            <p>ziffler</p>
+                            <p>Hisense</p>
+                            <p>TCL</p>
+                            <p>Xiaomi</p>
+                            <p>Immer</p>
+                            <p>Skyworth</p>
+                            <p>Avalon</p>
+                            <p>Rulls</p>
+                        </div>
 
+                    </div>
+                    <div class="menuDiv">
+                        <h3>Smartfonlar</h3>
+                        <p>Samsung</p>
+                        <p>Apple</p>
+                        <p>Xiaome</p>
+                        <p>Vivo</p>
+                        <p>Huawei</p>
+                        <p>Honor</p>
+                        <p>Novey</p>
+                        <p>Tecno</p>
+                        <p>Redmi</p>
+                        <p>Duoqin</p>
+                    </div>
+                    <div class="menuDiv">
+                        <h3>Smartfonlar</h3>
+                        <p>Samsung</p>
+                        <p>Apple</p>
+                        <p>Xiaome</p>
+                        <p>Vivo</p>
+                        <p>Huawei</p>
+                        <p>Honor</p>
+                        <p>Novey</p>
+                        <p>Tecno</p>
+                        <p>Redmi</p>
+                        <p>Duoqin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="overlay" id="overlay"></div>
+        <div class="input">
+            <input type="text" placeholder="Katalog buyicha qidirish">
+            <i class="ri-search-2-line"></i>
+        </div>
+        <div class="hero_menu">
+            <i class="ri-bar-chart-line"></i>
+            <p>Taqqoslash</p>
+        </div>
+        <div class="hero_menu">
+            <i class="ri-heart-line"></i>
+            <p>Sevimlilar</p>
+        </div>
+        <div class="hero_menu">
+            <div id="sup">
+                <i class="ri-shopping-cart-line"></i>
+                <sup>0</sup>
+            </div>
+            <p>Savatcha</p>
+        </div>
+        <div class="hero_menu">
+            <i class="ri-user-line"></i>
+            <p>Kirish</p>
+        </div>
+    </section>
+
+    <div class="product-details container"></div>
+    <script src="../js/product_details.js"></script>
 </body>
 
 

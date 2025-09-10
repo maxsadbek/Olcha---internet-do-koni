@@ -549,3 +549,5 @@ function goToProduct(id) {
     console.log("Go to:", id);
     window.location.href = "../html/product_details.html?id=" + id;
 }
+
+console.log(localStorage.getItem("selectedProduct"));

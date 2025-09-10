@@ -2,6 +2,11 @@
 const text = document.querySelector("#text")
 const textDiv = document.querySelector("#textDiv")
 const section = document.querySelector("#section");
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('menu');
+const menuBtn = document.querySelector(".menuBtn")
+const closeBtn = document.querySelector(".close")
 
 const product = JSON.parse(localStorage.getItem("card"));
 console.log(product)
@@ -92,6 +97,12 @@ miniCard.forEach(item => {
 });
 
 section.appendChild(wrapper);
+
+// menu btn
+btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    btn.classList.toggle("open");
+});
 
 // navbar
 const navbar = document.createElement("div");

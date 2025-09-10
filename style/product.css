@@ -1,0 +1,15 @@
+.productDetailTetx{
+    font-weight: 600;
+    margin-top: 2rem;
+    font-size: 40px;
+}
+
+.productImg{
+    margin-top: 2rem;
+    width: 500px;
+    border-radius: 20px;
+}
+
+img{
+    object-fit: cover;
+}
