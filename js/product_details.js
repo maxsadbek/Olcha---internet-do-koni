@@ -51,3 +51,7 @@ if (product) {
 } else {
   container.innerHTML = "<p>Mahsulot topilmadi </p>";
 }
+
+setTimeout(() => {
+  document.querySelector(".loader").style.display = "none";
+}, 1000);

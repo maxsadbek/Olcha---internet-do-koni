@@ -127,3 +127,7 @@ const id = crypto.randomUUID();
 localStorage.setItem("id", JSON.stringify(id));
 
 
+
+setTimeout(() => {
+    document.querySelector(".loader").style.display = "none";
+}, 1000);
