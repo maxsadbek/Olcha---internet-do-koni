@@ -16,12 +16,31 @@
 </head>
 
 <body>
-    <div class="container gridParent"></div>
-    <h1>assalomu aleykum</h1>
-<script src="../js/product.js"></script>
-<script src="../js/product_details.js"></script>
+<body>
+    <div class="product-details">
+        <img class="product-img" src="" alt="Product image">
+        <h2 class="product-title"></h2>
+        <p class="product-price"></p>
+        <p class="product-month"></p>
+    </div>
+
+    <script>
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+        if (product) {
+            console.log("Mahsulot tafsilotlari:", product);
+
+            document.querySelector(".product-title").textContent = product.cardText;
+            document.querySelector(".product-img").src = product.cardImg;
+            document.querySelector(".product-price").textContent = product.cardPrice;
+            document.querySelector(".product-month").textContent = product.cardMonth;
+        } else {
+            document.body.innerHTML = "<h3>Mahsulot topilmadi ❌</h3>";
+        }
+    </script>
+</body>
 
 
 </body>
+
 
 </html>

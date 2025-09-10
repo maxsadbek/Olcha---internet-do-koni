@@ -922,6 +922,7 @@ i {
 }
 
 .cardDiv p {
+    margin-top: 2rem;
     font-size: 19px;
     font-weight: 700;
     margin-bottom: 10px;

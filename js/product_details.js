@@ -1,21 +1,9 @@
-const params = new URLSearchParams(window.location.search);
-const productId = params.get("id");
-
-const container = document.querySelector(".gridParent");
-
-const product = products.find(p => p.id === productId);
-
-if (!product) {
-  container.innerHTML = "<h2>Mahsulot topilmadi 😢</h2>";
-} else {
-  container.innerHTML = `
-    <div class="product-detail">
-      <img src="${product.img}" alt="${product.title}">
-      <h1>${product.title}</h1>
-      <p class="old-price">${product.oldPrice}</p>
-      <h2 class="price">${product.price}</h2>
-      <p class="installment">${product.installment}</p>
-      <span class="badge">${product.badge}</span>
-    </div>
-  `;
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const productData = localStorage.getItem("selectedProduct");
+  if (productData) {
+    const product = JSON.parse(productData);
+    document.querySelector(".product-title").textContent = product.cardText;
+    document.querySelector(".product-price").textContent = product.cardPrice;
+    document.querySelector(".product-img").src = product.cardImg;
+  }
+});

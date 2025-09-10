@@ -169,90 +169,99 @@ const products = [
 
 const cards = [
     {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/v7EZI19OSbVEPuFg3F3xS5iRIjNAjnYsATd8HmHQKrMXvIU4RpwlKiISLVd8.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Xiaomi Redmi Note 14 Pro",
         cardPrice: "3 532 000 so'm",
         cardMonth: "414 000 so'm x 12 oy",
-        cardBtn: "<i class='ri-heart-line heart'></i>",
+        cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2024-11-28/PK439EIN2oVAvX6ezVPJYOJF8X5v1kzGlRvGhIRy7Nwht9h7qbyRFx89dDVn.png",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Apple IPhone 15 Pro Max",
         cardPrice: "16 295 000 so'm",
         cardMonth: "1 909 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-03-11/RX3I5bViXa5VL5q2I3h4UlHmlUnianu3RJLG0H99inmN63k2CJ0pxJX168UZ.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
-        cardText: "Sony PlayStation PS5 Digital Edition 1 TB (from U.A.E)",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
+        cardText: "Sony PlayStation PS5 Digital",
         cardPrice: "6 365 000 so'm",
         cardMonth: "746 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/OY5ohuZDkmuAxX40VGTlmr5cDP5HAR64EKCzNmOtXJqdA6rv9N7QkDmCghj9.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Xiaomi Redmi Note 14",
         cardPrice: "2 319 000 so'm",
         cardMonth: "272 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/97ckzjNsRYY2xIFDrv7C6SYqD84nq4iXBjwlg2ILGVVgjiOYkCcu0zuc793S.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Samsung Galaxy A55",
         cardPrice: "4 553 800 so'm",
         cardMonth: "534 000 so'm x 12 oy",
-        cardBtn: "<i class='ri-heart-line heart'></i>",
+        cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/iupANfMv7Z23H8WOmxokqdIP1xRaJpfex9wn7dBo6Rx7D0LNfJOo5umxEeHV.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Xiaomi Redmi 14C",
         cardPrice: "1 522 000 so'm",
         cardMonth: "179 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-04-23/ABacr2NI4l5hkxlswKgANn8aBCZ0oU1cvb8eYW4AX5GS7AxrmJP4NbSVYAyi.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Apple IPhone 16Pro Max",
         cardPrice: "18 444 000 so'm",
         cardMonth: "2 160 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/aC7oCEK8puWMKfaKeSLXA1lYrhL4YzMZlielrLpFr7CEjHvtsg5GLto7Q4CS.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Samsung Galaxy A16",
         cardPrice: "2 199 000 so'm",
         cardMonth: "258 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/pmb1oRujJ6jborxYlx6LMVTAey54qGYSQWrae3oUN9BKYccclwfX5MZkGkjj.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Samsung Galaxy A06",
         cardPrice: "1 865 000 so'm",
         cardMonth: "219 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/v7EZI19OSbVEPuFg3F3xS5iRIjNAjnYsATd8HmHQKrMXvIU4RpwlKiISLVd8.jpg",
-        cradHeart: "<i class='ri-heart-line'></i>",
-        cardTables: "<i class='ri-bar-chart-line tablitsa'></i>",
+        cradHeart: "ri-heart-line",
+        cardTables: "ri-bar-chart-line tablitsa",
         cardText: "Xiaomi Redmi Note 14 Pro",
         cardPrice: "3 532 000 so'm",
         cardMonth: "414 000 so'm x 12 oy",
@@ -260,7 +269,18 @@ const cards = [
         cardBtn2: "Muddatli to'lov"
     },
 ]
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn3")) {
+        const productId = e.target.dataset.id;
+        const product = cards.find(c => c.id === productId);
 
+        if (product) {
+            localStorage.setItem("selectedProduct", JSON.stringify(product));
+            console.log("Saqlangan product:", product);
+            window.location.href = "../html/product_details.html";
+        }
+    }
+});
 
 document.addEventListener("click", (e) => {
     const heart = e.target.closest(".heart");
@@ -414,16 +434,18 @@ function creatCard(item) {
         <div class="cardImg">
             <img src="${item.cardImg}" alt="${item.cardText}">
             <div class="icons">
-                <i class="heart">${item.cradHeart}</i>
-                <i class="tablitsa">${item.cardTables}</i>
+                <i class="heart ${item.cradHeart}"></i>
+                <i class="${item.cardTables}"></i>
             </div>
         </div>
         <h2>${item.cardText}</h2>
         <p>${item.cardPrice}</p>
         <mark>${item.cardMonth}</mark>
+        <br /><br /><br />
         <div class="cardBtn">
             <button class="btn1">${item.cardBtn}</button>
-            <button class="btn3">${item.cardBtn2}</button>
+            <button class="btn3" data-id="${item.id}">${item.cardBtn2}</button>
+            <!-- ✅ bu yerda id ni data-id qilib berildi -->
         </div>
     `;
 
@@ -520,14 +542,10 @@ localStorage.setItem("card", JSON.stringify(card));
 
 const savedCard = JSON.parse(localStorage.getItem("card"));
 
-
-console.log(savedCard[0].id, savedCard[0].theProductName);
-
-
 const selectedId = "shuIDniOling";
 const selectedCard = savedCard.find(item => item.id === selectedId);
 
 function goToProduct(id) {
     console.log("Go to:", id);
-    window.location.href = "html/product_details.html?id=" + id;
+    window.location.href = "../html/product_details.html?id=" + id;
 }
