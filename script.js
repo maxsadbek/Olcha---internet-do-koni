@@ -22,6 +22,8 @@ let heart = document.querySelector(".heart i")
 let cradSection = document.querySelector(".cradSection")
 let checkIcon = document.querySelectorAll(".checkIcon i")
 let btn1 = document.querySelectorAll(".btn1")
+let noPlus = document.querySelectorAll(".no")
+let i = 0
 
 // navbar
 const navItems = [
@@ -396,21 +398,10 @@ document.addEventListener("click", (e) => {
 
     checkBtn.classList.remove("none");
     checkBtn.classList.add("activeBtn");
+    noPlus.textContent = +1;
+    i++
 });
 
-document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".btn1");
-    if (!btn) return;
-
-    const btn1 = btn.parentElement.querySelector(".checkBtn");
-
-    btn.classList.toggle("activeBtn");
-
-    if (checkBtn) {
-        checkBtn.classList.add("none");
-        checkBtn.classList.remove("activeBtn");
-    }
-});
 
 language.addEventListener("click", () => {
     rus.classList.toggle("active")
@@ -642,7 +633,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let i = 0;
     let x0 = null, dx = 0, isDown = false;
-    let timer = null; const interval = 3500; const threshold = 40; // px
+    let timer = null; const interval = 3500; const threshold = 40;
 
 
     // build dots
@@ -702,3 +693,21 @@ function goToProduct(id) {
 setTimeout(() => {
     document.querySelector(".loader").style.display = "none";
 }, 1000);
+
+// time
+function clock() {
+    var date = new Date()
+    var hour = date.getHours()
+    var minute = date.getMinutes()
+    var second = date.getSeconds()
+
+    if (hour < 12) {
+        hour -= 12
+    }
+
+    document.querySelector("#hours").innerHTML = hour
+    document.querySelector("#minutes").innerHTML = minute
+    document.querySelector("#seconds").innerHTML = second
+}
+
+setInterval(clock, 1000)
