@@ -836,6 +836,7 @@ i {
     color: #fff;
     padding: 7px;
     border-radius: 50%;
+    font-size: 20px;
 }
 
 .heart.activs {
@@ -866,6 +867,7 @@ i {
     color: #fff;
     padding: 7px;
     border-radius: 50%;
+    font-size: 20px;
 }
 
 .btn1 {
@@ -972,6 +974,63 @@ i {
         transform: rotate(360deg);
     }
 }
+
+.imgs img {
+    margin-top: 2rem;
+    border-radius: 20px;
+    width: 1430px;
+    transition: all 0.3s ease-in-out;
+}
+
+.imgs img:hover {
+    transform: scale(1.01);
+}
+
+.mark {
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(255, 225, 0);
+    border-radius: 7px;
+}
+
+.texnika {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 12px;
+}
+
+.texnikaCard {
+    width: 280px;
+    height: auto;
+    background-color: #8a93a62e;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.texnikaCard img {
+    margin-left: 0.7rem;
+    width: 220px;
+    border-radius: 20px;
+}
+
+.texnikaCard p {
+    margin-top: 1rem;
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.texnikaCard h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+
 
 @media screen and (max-width:600px) {
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');

@@ -269,6 +269,76 @@ const cards = [
         cardBtn2: "Muddatli to'lov"
     },
 ]
+
+const cardTexnik = [
+    {
+        id: crypto.randomUUID(),
+        texnikImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-16/CyLviu6FztS1boze9sPutiFk7mBmUwaAhiq90SJfrmGEAyBH5DX1sNL36vJj.jpg",
+        texnikHeart: "ri-heart-line",
+        texnikTables: "ri-bar-chart-line tablitsa",
+        texnikText: "Namlagich va aromadiffuzod 2b1 Hoco HX30",
+        texnikPrice: "180 000 so'm",
+        texnikMonth: "22 000 so'm x 12 oy",
+        texnikBtn: "<i class='ri-shopping-cart-line'></i>",
+        texnikBtn2: "Muddatli to'lov"
+    },
+    {
+        id: crypto.randomUUID(),
+        texnikImg: "https://olcha.uz/image/700x700/products/67MUFURwbTj1C0y3fbtYD0RZbGlwRXzmM3pOs6SpUNMKsFhcyOqev1xNJNTG.jpg",
+        texnikHeart: "ri-heart-line",
+        texnikTables: "ri-bar-chart-line tablitsa",
+        texnikText: "Namlangan Xiaomi Mi Smart Stelirizator Humidifier S",
+        texnikPrice: "1 511 900 so'm",
+        texnikMonth: "178 000 so'm x 12 oy",
+        texnikBtn: "<i class='ri-shopping-cart-line'></i>",
+        texnikBtn2: "Muddatli to'lov"
+    },
+    {
+        id: crypto.randomUUID(),
+        texnikImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-10/2fTEtfD4m0ytLgCy0mCxlNdZlwvtGp1bW9fdxQjTCpxOgEAiJ6LRwQOMc0nh.jpg",
+        texnikHeart: "ri-heart-line",
+        texnikTables: "ri-bar-chart-line tablitsa",
+        texnikText: "Konditsaner Artel Everest 12 Inverter ARTIS3AW12BE",
+        texnikPrice: "4 872 000 so'm",
+        texnikMonth: "573 000 so'm x 12 oy",
+        texnikBtn: "<i class='ri-shopping-cart-line'></i>",
+        texnikBtn2: "Muddatli to'lov"
+    },
+    {
+        id: crypto.randomUUID(),
+        texnikImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-10/2fTEtfD4m0ytLgCy0mCxlNdZlwvtGp1bW9fdxQjTCpxOgEAiJ6LRwQOMc0nh.jpg",
+        texnikHeart: "ri-heart-line",
+        texnikTables: "ri-bar-chart-line tablitsa",
+        texnikText: "Konditsaner Artel Everest 12 Inverter ARTIS3AW12BE (09)",
+        texnikPrice: "4 892 000 so'm",
+        texnikMonth: "573 000 so'm x 12 oy",
+        texnikBtn: "<i class='ri-shopping-cart-line'></i>",
+        texnikBtn2: "Muddatli to'lov"
+    },
+    {
+        id: crypto.randomUUID(),
+        texnikImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-10/2fTEtfD4m0ytLgCy0mCxlNdZlwvtGp1bW9fdxQjTCpxOgEAiJ6LRwQOMc0nh.jpg",
+        texnikHeart: "ri-heart-line",
+        texnikTables: "ri-bar-chart-line tablitsa",
+        texnikText: "Konditsaner Rulls Sirius 12 Inverter",
+        texnikPrice: "3 578 000 so'm",
+        texnikMonth: "420 000 so'm x 12 oy",
+        texnikBtn: "<i class='ri-shopping-cart-line'></i>",
+        texnikBtn2: "Muddatli to'lov"
+    },
+    {
+        id: crypto.randomUUID(),
+        texnikImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-10/2fTEtfD4m0ytLgCy0mCxlNdZlwvtGp1bW9fdxQjTCpxOgEAiJ6LRwQOMc0nh.jpg",
+        texnikHeart: "ri-heart-line",
+        texnikTables: "ri-bar-chart-line tablitsa",
+        texnikText: "Konditsaner Ziffler Vigo 12 Inverter",
+        texnikPrice: "4 064 000 so'm",
+        texnikMonth: "476 000 so'm x 12 oy",
+        texnikBtn: "<i class='ri-shopping-cart-line'></i>",
+        texnikBtn2: "Muddatli to'lov"
+    }
+];
+
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn3")) {
         const productId = e.target.dataset.id;
@@ -281,6 +351,8 @@ document.addEventListener("click", (e) => {
         }
     }
 });
+
+
 
 document.addEventListener("click", (e) => {
     const heart = e.target.closest(".heart");
@@ -445,7 +517,6 @@ function creatCard(item) {
         <div class="cardBtn">
             <button class="btn1">${item.cardBtn}</button>
             <button class="btn3" data-id="${item.id}">${item.cardBtn2}</button>
-            <!-- ✅ bu yerda id ni data-id qilib berildi -->
         </div>
     `;
 
@@ -453,6 +524,31 @@ function creatCard(item) {
 }
 
 cards.forEach(item => creatCard(item));
+
+function texnikCard(item) {
+    const texnikDiv = document.createElement("div");
+    texnikDiv.classList.add("texnikaCard");
+
+    texnikDiv.innerHTML = `
+        <img src="${item.texnikImg}" alt="${item.texnikText}">
+        <div class="icons">
+            <i class="heart ${item.texnikHeart}"></i>
+            <i class="${item.texnikTables}"></i>
+        </div>
+        <p>${item.texnikText}</p>
+        <p>${item.texnikPrice}</p>
+        <mark class="mark">${item.texnikMonth}</mark>
+        <br /><br /><br />
+        <div class="texnikbtn">
+            <button class="btn1">${item.texnikBtn}</button>
+            <button class="btn3" data-id="${item.id}">${item.texnikBtn2}</button>
+        </div>
+    `;
+
+    document.querySelector(".texnika").appendChild(texnikDiv);
+}
+
+cardTexnik.forEach(item => texnikCard(item));
 
 function renderProducts(containerSelector = ".container.gridParent") {
     const container = document.querySelector(containerSelector);
@@ -549,8 +645,6 @@ function goToProduct(id) {
     console.log("Go to:", id);
     window.location.href = "../html/product_details.html?id=" + id;
 }
-
-console.log(localStorage.getItem("selectedProduct"));
 
 setTimeout(() => {
     document.querySelector(".loader").style.display = "none";
