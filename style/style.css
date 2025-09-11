@@ -1030,7 +1030,26 @@ i {
     margin-bottom: 1rem;
 }
 
+.none {
+    display: none;
+}
 
+.btn1.none{
+    display: none;
+}
+
+.checkIcon.activeBtn{
+    display: inline-block;
+}
+
+.checkBtn{
+    padding: 8px;
+    font-size: 25px;
+    border-radius: 12px;
+    background-color: transparent;
+    border: 2px solid #000;
+    color: #4f8cff;
+}
 
 @media screen and (max-width:600px) {
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -1868,5 +1887,205 @@ i {
         margin-left: 0rem;
         width: 100%;
         border-radius: 20px;
+    }
+
+    .gridParent {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: #d4002a;
+        border-radius: 15px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .GridBox {
+        border-radius: 20px;
+    }
+
+    .GridBox img {
+        width: 160px;
+        object-fit: cover;
+    }
+
+    .gridChild {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 15px;
+        cursor: pointer;
+        padding-bottom: 50px;
+    }
+
+    .GridBox button {
+        padding: 3px;
+        font-size: 16px;
+        background-color: #d4002a;
+        border: none;
+        border-radius: 7px;
+        color: #fff;
+    }
+
+    .gridChild button {
+        margin-right: -3rem;
+    }
+
+    .gridChild>div {
+        z-index: 111;
+    }
+
+    .gridBOx2 h3 {
+        color: #d4002a;
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .gridMini {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .gridPhone {
+        margin-bottom: 2rem;
+    }
+
+    .gridPhone p {
+        font-size: 16px;
+    }
+
+
+    .gridPhone i {
+        font-size: 20px;
+        color: #a9a0a0;
+    }
+
+    .gridMini2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gridMini2 p {
+        font-size: 15px;
+        color: #828997;
+        text-decoration-line: line-through;
+    }
+
+    .gridMini2 i {
+        font-size: 20px;
+        color: #888;
+        margin-bottom: 1rem;
+    }
+
+    .c2 {
+        margin-top: 1rem;
+    }
+
+    .gridChild .math {
+        margin-top: 10px;
+        background-color: yellow;
+        font-size: 14px;
+    }
+
+    .grid3 {
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .grid3 img {
+        width: 200px;
+        display: block;
+    }
+
+    .grid3 .chegirma button {
+        padding: 5px;
+        background-color: #d4002a;
+        color: #fff;
+        border-radius: 7px;
+        border: none;
+
+    }
+
+    .grid3 {
+        position: relative;
+        display: inline-block;
+    }
+
+    .grid3 h2 {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .grid3 h3 {
+        margin-top: 0.7rem;
+        font-size: 19px;
+        color: #d4002a;
+    }
+
+    .grid3 p {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #1212128d;
+        margin-bottom: 7px;
+    }
+
+    .grid3 mark {
+        padding: 5px;
+        background-color: rgb(255, 225, 0);
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .img{
+        padding: 0 15px;
+    }
+
+    .imgs img{
+        width: 100%;
+    }
+
+    .texnika {
+        margin-top: 3rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 12px;
+    }
+
+    .texnikaCard {
+        width: 100%;
+        height: auto;
+        background-color: #8a93a62e;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .texnikaCard img {
+        margin-left: 0rem;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .texnikaCard p {
+        margin-top: 1rem;
+        font-size: 17px;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+    .texnikaCard h3 {
+        font-size: 20px;
+        margin-bottom: 1rem;
     }
 }

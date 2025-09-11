@@ -20,6 +20,8 @@ const mobileMenu = document.querySelector("#closeMobile")
 let mobileMenuBtn = document.querySelector("#mobileMenu")
 let heart = document.querySelector(".heart i")
 let cradSection = document.querySelector(".cradSection")
+let checkIcon = document.querySelectorAll(".checkIcon i")
+let btn1 = document.querySelectorAll(".btn1")
 
 // navbar
 const navItems = [
@@ -62,43 +64,52 @@ const card = [
         id: crypto.randomUUID(),
         theProductName: "Noutbook,printer,  kompyuterlar",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/n4H7uKvN0pFwsYXSs66rsdUdHxGiRCWn8JVt9O0Qt1ecNl1fOEDJ7j0BHj81.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
 
     }, {
         id: crypto.randomUUID(),
         theProductName: "Smartfon,telefon, gadjet, aksessuarlar",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/K83YTs4SqPeI3Ohx1lN0bDnbiV1Z9EnwZHMr2HsjIlDhmT48cBgn4C0Ve9Br.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
 
     }, {
         id: crypto.randomUUID(),
         theProductName: "Maishiy texnika",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/yfGs0HUuX5wKnXwPbOyEswpZFzzGhmHdpptTriBTKm01HUxMqTBEg1QA2CQr.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
 
     }, {
         id: crypto.randomUUID(),
         theProductName: "Barchasi oshxona uchun",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/eCJj0q3ixqzqS3xvZhnMSQnYC1SLTnLB475I5l5ltz6rxi9rUmYauATe5Pa6.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
 
     }, {
         id: crypto.randomUUID(),
         theProductName: "Sport anjomlari",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/D1UNIE2gMBYHkx9XQl452O6I2jtQOpD4kvhOWQCtr9fuPliQWVSAkN9YXjiQ.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
     {
         id: crypto.randomUUID(),
         theProductName: "Go'zallik va salomatlik",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/Lio8FefcAG352o0hPeqHDkd7TVlr2NQ4ljQAQziRlTjWOz08RiB1fncFbe2D.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         theProductName: "Avto jihozlari",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/xrGNIS4zILNfb5qMXC0nvDLo09QuwdrdXYEKqn7UOEI9PndrjYR1BNX6CQbA.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         theProductName: "Barchasi ofis, uy va bog' uchun",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/ZiWkDeTfCnCNHDWZnu0xXtxwkZ6Qe3embHveXzJVRXfdnaJB5sRsnJiU22vS.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         theProductName: "Bolalar uchun o'yinchoqlar va mahsulotlar",
         productImg: "https://olcha.uz/image/128x128/category/cdn_1/2024-05-28/e6S4NLdIceYAv1zDvwHPVHFWSEMMgUxMwbOjThhsguSxVUKTY6yKbXvwOJ6M.png",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
 
 ]
@@ -177,7 +188,8 @@ const cards = [
         cardPrice: "3 532 000 so'm",
         cardMonth: "414 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2024-11-28/PK439EIN2oVAvX6ezVPJYOJF8X5v1kzGlRvGhIRy7Nwht9h7qbyRFx89dDVn.png",
@@ -187,7 +199,8 @@ const cards = [
         cardPrice: "16 295 000 so'm",
         cardMonth: "1 909 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-03-11/RX3I5bViXa5VL5q2I3h4UlHmlUnianu3RJLG0H99inmN63k2CJ0pxJX168UZ.jpg",
@@ -197,7 +210,8 @@ const cards = [
         cardPrice: "6 365 000 so'm",
         cardMonth: "746 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/OY5ohuZDkmuAxX40VGTlmr5cDP5HAR64EKCzNmOtXJqdA6rv9N7QkDmCghj9.jpg",
@@ -207,7 +221,8 @@ const cards = [
         cardPrice: "2 319 000 so'm",
         cardMonth: "272 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/97ckzjNsRYY2xIFDrv7C6SYqD84nq4iXBjwlg2ILGVVgjiOYkCcu0zuc793S.jpg",
@@ -226,7 +241,8 @@ const cards = [
         cardPrice: "1 522 000 so'm",
         cardMonth: "179 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-04-23/ABacr2NI4l5hkxlswKgANn8aBCZ0oU1cvb8eYW4AX5GS7AxrmJP4NbSVYAyi.jpg",
@@ -236,7 +252,8 @@ const cards = [
         cardPrice: "18 444 000 so'm",
         cardMonth: "2 160 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/aC7oCEK8puWMKfaKeSLXA1lYrhL4YzMZlielrLpFr7CEjHvtsg5GLto7Q4CS.jpg",
@@ -246,7 +263,8 @@ const cards = [
         cardPrice: "2 199 000 so'm",
         cardMonth: "258 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/pmb1oRujJ6jborxYlx6LMVTAey54qGYSQWrae3oUN9BKYccclwfX5MZkGkjj.jpg",
@@ -256,7 +274,8 @@ const cards = [
         cardPrice: "1 865 000 so'm",
         cardMonth: "219 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }, {
         id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/v7EZI19OSbVEPuFg3F3xS5iRIjNAjnYsATd8HmHQKrMXvIU4RpwlKiISLVd8.jpg",
@@ -266,7 +285,8 @@ const cards = [
         cardPrice: "3 532 000 so'm",
         cardMonth: "414 000 so'm x 12 oy",
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
-        cardBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
 ]
 
@@ -280,7 +300,8 @@ const cardTexnik = [
         texnikPrice: "180 000 so'm",
         texnikMonth: "22 000 so'm x 12 oy",
         texnikBtn: "<i class='ri-shopping-cart-line'></i>",
-        texnikBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
     {
         id: crypto.randomUUID(),
@@ -291,7 +312,8 @@ const cardTexnik = [
         texnikPrice: "1 511 900 so'm",
         texnikMonth: "178 000 so'm x 12 oy",
         texnikBtn: "<i class='ri-shopping-cart-line'></i>",
-        texnikBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
     {
         id: crypto.randomUUID(),
@@ -302,7 +324,8 @@ const cardTexnik = [
         texnikPrice: "4 872 000 so'm",
         texnikMonth: "573 000 so'm x 12 oy",
         texnikBtn: "<i class='ri-shopping-cart-line'></i>",
-        texnikBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
     {
         id: crypto.randomUUID(),
@@ -313,7 +336,8 @@ const cardTexnik = [
         texnikPrice: "4 892 000 so'm",
         texnikMonth: "573 000 so'm x 12 oy",
         texnikBtn: "<i class='ri-shopping-cart-line'></i>",
-        texnikBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
     {
         id: crypto.randomUUID(),
@@ -324,7 +348,8 @@ const cardTexnik = [
         texnikPrice: "3 578 000 so'm",
         texnikMonth: "420 000 so'm x 12 oy",
         texnikBtn: "<i class='ri-shopping-cart-line'></i>",
-        texnikBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     },
     {
         id: crypto.randomUUID(),
@@ -335,7 +360,8 @@ const cardTexnik = [
         texnikPrice: "4 064 000 so'm",
         texnikMonth: "476 000 so'm x 12 oy",
         texnikBtn: "<i class='ri-shopping-cart-line'></i>",
-        texnikBtn2: "Muddatli to'lov"
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "<i class='ri-check-double-line'></i>"
     }
 ];
 
@@ -352,14 +378,38 @@ document.addEventListener("click", (e) => {
     }
 });
 
-
-
 document.addEventListener("click", (e) => {
     const heart = e.target.closest(".heart");
     if (!heart) return;
     heart.classList.toggle("activs");
     heart.classList.toggle("ri-heart-line");
     heart.classList.toggle("ri-heart-fill");
+});
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn1");
+    if (!btn) return;
+
+    const checkBtn = btn.parentElement.querySelector(".checkBtn");
+
+    btn.classList.add("none");
+
+    checkBtn.classList.remove("none");
+    checkBtn.classList.add("activeBtn");
+});
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn1");
+    if (!btn) return;
+
+    const btn1 = btn.parentElement.querySelector(".checkBtn");
+
+    btn.classList.toggle("activeBtn");
+
+    if (checkBtn) {
+        checkBtn.classList.add("none");
+        checkBtn.classList.remove("activeBtn");
+    }
 });
 
 language.addEventListener("click", () => {
@@ -489,6 +539,7 @@ function createGrid3(item) {
       </div>
             <div class="gridBtn">
                 <button class="btn1"><i class="ri-shopping-cart-line"></i></button>
+                <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
                 <a href="../html/product_details.html"><button class="btn3">Muddatli to'lov</button></a>
           </div>
     `;
@@ -516,6 +567,7 @@ function creatCard(item) {
         <br /><br /><br />
         <div class="cardBtn">
             <button class="btn1">${item.cardBtn}</button>
+            <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
             <button class="btn3" data-id="${item.id}">${item.cardBtn2}</button>
         </div>
     `;
@@ -541,7 +593,8 @@ function texnikCard(item) {
         <br /><br /><br />
         <div class="texnikbtn">
             <button class="btn1">${item.texnikBtn}</button>
-            <button class="btn3" data-id="${item.id}">${item.texnikBtn2}</button>
+                <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
+            <button class="btn3" data-id="${item.id}">Muddatli to'lov</button>
         </div>
     `;
 
