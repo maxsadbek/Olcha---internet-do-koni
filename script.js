@@ -375,6 +375,151 @@ const cardTexnik = [
     }
 ];
 
+const radarCard = [
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-38%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/jdQQlLwyBqRwbfHoKtBSGjkM0CvG5roLC3RGBCHlo2zjCH7mzb82ODbB3He3.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor X-COP 7700s Black",
+        priceRadar: "1 968 000 so'm",
+        oldPriceRadar: "2 968 000 so'm",
+        markRadar: "231 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-43%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/RdJxc6HJoXodAUp98xd1u2QXUxEuEZgRlijMpjej9CIiY5j4rSwQMGHZO8Mx.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar detektor Neoline X-COP 7800s WiFi Black",
+        priceRadar: "2 214 000 so'm",
+        oldPriceRadar: "3 852 000 so'm",
+        markRadar: "260 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-35%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/BNZKWUc7H81qHbWjaoQqForyXrKLI8L18FWOHEbhW4YQuquOIrcanzhyhLVo.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor SHO-ME G-1000 Signature Black",
+        priceRadar: "1 540 000 so'm",
+        oldPriceRadar: "2 360 000 so'm",
+        markRadar: "190 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-40%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/WpQah1iCO6puwPxVAT0PVM6t1YyQmapW1YaEl0aCy4TI5Pb0TTEhrciMJluL.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor StreetStorm STR-9900EX Black",
+        priceRadar: "2 940 000 so'm",
+        oldPriceRadar: "4 900 000 so'm",
+        markRadar: "367 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-33%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/6BbzlC3vRAlX25Z10j3IK9R1egNtG61Um3xO5m4snkM3L3XF5jYPyKuuuyqf.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor Supra DRS-iG77VST Black",
+        priceRadar: "1 328 000 so'm",
+        oldPriceRadar: "1 980 000 so'm",
+        markRadar: "166 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-37%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/VVchpHMms7wk82m6sn9Rm24MHKtF930CW9Zk1HQvIEwHU6Fp6yqjdVlSSACF.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor Neoline X-COP 9700 Black",
+        priceRadar: "3 150 000 so'm",
+        oldPriceRadar: "5 000 000 so'm",
+        markRadar: "392 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-30%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/PZVlUORpAsYIS0nYE8flS9JmMbqJLV0fscTXsnANIImkmJZDDFZKC6TxGvO9.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor Cobra RAD 480i Black",
+        priceRadar: "1 820 000 so'm",
+        oldPriceRadar: "2 600 000 so'm",
+        markRadar: "227 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-41%",
+        radarImg: "https://olcha.uz/image/400x400/products/cdn_1/supplier/stores/1/2025-07-07/nI4JjB74J3Pfydk4fFfY40AQAksrrxBYx5U0fjWH6LPf6Ea9NXHenRzJY8kj.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor PlayMe P570 Black",
+        priceRadar: "1 670 000 so'm",
+        oldPriceRadar: "2 830 000 so'm",
+        markRadar: "208 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-29%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/Fkl4isDetRXYOGEz4k10lNnneUXRQKSdPGw2Asafe2ydLno5cy8xrbt0W2q2.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor Beltronics GT-360 Black",
+        priceRadar: "4 200 000 so'm",
+        oldPriceRadar: "5 900 000 so'm",
+        markRadar: "525 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+    {
+        radarID: crypto.randomUUID(),
+        btn: "-32%",
+        radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/1aP6S6rQt1UStZTJXpXzZ0Ydsf3HZte6C3P1MYLzcRGC5WRNPuZ8vmt45gwh.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        radarText: "Radar-detektor Escort MAX 3 Black",
+        priceRadar: "5 500 000 so'm",
+        oldPriceRadar: "8 100 000 so'm",
+        markRadar: "687 000 so'm x 12 oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }
+];
+
+
+
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn3")) {
         const productId = e.target.dataset.id;
@@ -602,6 +747,40 @@ function texnikCard(item) {
 
 cardTexnik.forEach(item => texnikCard(item));
 
+
+function radarcard(item) {
+    const radarDiv = document.createElement("div");
+    radarDiv.classList.add("texnikaCard");
+
+    radarDiv.innerHTML = `
+      <div class="chegirma">
+          <button>${item.btn}</button>
+      </div>
+      <img src="${item.radarImg}" alt="${item.radarText}">
+      <div class="icon">
+          <i class="${item.heartIcon} heart"></i>
+          <i class="${item.tableIcon} tablitsa"></i>
+      </div>
+      <p>${item.radarText}</p>
+      <div class="priceRadar">
+          <h3>${item.priceRadar}</h3>
+          <h4>${item.oldPriceRadar}</h4>
+      </div>
+      <mark class="mark">${item.markRadar}</mark>
+      <br><br><br>
+      <div>
+          <button class="btn1"><i class="${item.texnikBtn}"></i></button>
+          <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
+          <button class="btn3" data-id="${item.radarID}">${item.cardBtn2}</button>
+      </div>
+  `;
+
+    document.querySelector(".radarCard").appendChild(radarDiv);
+}
+
+radarCard.forEach(item => radarcard(item));
+
+
 function renderProducts(containerSelector = ".container.gridParent") {
     const container = document.querySelector(containerSelector);
     if (!container) {
@@ -727,7 +906,7 @@ document.addEventListener("click", (e) => {
     const btn = e.target.closest(".btn1");
     if (!btn) return;
 
-    const parent = btn.closest(".gridChild, .grid3, .cardDiv, .texnikaCard");
+    const parent = btn.closest(".gridChild, .grid3, .cardDiv, .texnikaCard", "radarCard");
     if (!parent) return;
 
     const product = {
@@ -764,4 +943,8 @@ closeModal.addEventListener("click", () => {
 clear.addEventListener("click", () => {
     cart = [];
     cartItems.innerHTML = "";
+    cartCount.innerHTML = 0
 });
+
+renderRadarCards();
+

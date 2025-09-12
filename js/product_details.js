@@ -5,6 +5,19 @@ const menu = document.getElementById('menu');
 const overlay = document.getElementById('menu');
 const menuBtn = document.querySelector(".menuBtn")
 const closeBtn = document.querySelector(".close")
+
+if (product) {
+  container.innerHTML = `
+    <h2 class="productDetailTetx">${product.radarText}</h2>
+    <img src="${product.radarImg}" alt="" class="productImg">
+    <p><strong>Narxi:</strong> ${product.priceRadar}</p>
+    <p><del>${product.oldPriceRadar}</del></p>
+    <small>${product.markRadar}</small>
+  `;
+} else {
+  container.innerHTML = "<p>Mahsulot topilmadi!</p>";
+}
+
 const navItems = [
   { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
   { tag: "button", text: "Chegirmalar", class: "btn chgirma" },

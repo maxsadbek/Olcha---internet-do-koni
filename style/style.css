@@ -820,7 +820,7 @@ i {
     display: block;
 }
 
-.grid3 .chegirma button {
+.chegirma button {
     padding: 5px;
     background-color: #d4002a;
     color: #fff;
@@ -1128,7 +1128,7 @@ i {
     flex-wrap: wrap;
 }
 
-.modal-content img{
+.modal-content img {
     width: 40%;
     border-radius: 20px;
     margin-bottom: 1rem;
@@ -1161,8 +1161,39 @@ i {
     z-index: 9999;
 }
 
-#clear{
+#clear {
     margin-top: 2rem;
+}
+
+.catsBanner {
+    margin-bottom: 3rem;
+}
+
+.radarCard {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 12px;
+}
+
+.priceRadar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.priceRadar h3 {
+    font-size: 18px;
+    color: #d4002a;
+}
+
+.priceRadar h4 {
+    margin-top: -10px;
+    font-size: 14px;
+    color: #555;
+    text-decoration-line: line-through;
 }
 
 @media screen and (max-width:900px) {
