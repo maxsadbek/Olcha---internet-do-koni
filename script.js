@@ -23,7 +23,14 @@ let cradSection = document.querySelector(".cradSection")
 let checkIcon = document.querySelectorAll(".checkIcon i")
 let btn1 = document.querySelectorAll(".btn1")
 let noPlus = document.querySelectorAll(".no")
-let i = 0
+let cart = [];
+let count = 0;
+const cartCount = document.getElementById("cartCount");
+const cartIcon = document.getElementById("cartIcon");
+const cartModal = document.getElementById("cartModal");
+const closeModal = document.getElementById("closeModal");
+const cartItems = document.getElementById("cartItems");
+
 
 // navbar
 const navItems = [
@@ -709,5 +716,47 @@ function clock() {
     document.querySelector("#minutes").innerHTML = minute
     document.querySelector("#seconds").innerHTML = second
 }
+function addToCart(item) {
+    cart.push(item);
+    count++;
+    cartCount.textContent = count;
+}
 
-setInterval(clock, 1000)
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn1");
+    if (!btn) return;
+
+    const parent = btn.closest(".gridChild, .grid3, .cardDiv, .texnikaCard");
+    if (!parent) return;
+
+    const product = {
+        title: parent.querySelector("p, h2")?.textContent || "No name",
+        price: parent.querySelector("h3, .cardPrice, .texnikPrice")?.textContent || "",
+        img: parent.querySelector("img")?.src || ""
+    };
+
+    addToCart(product);
+
+    btn.classList.add("none");
+    const checkBtn = parent.querySelector(".checkBtn");
+    if (checkBtn) checkBtn.classList.remove("none");
+});
+
+cartIcon.addEventListener("click", () => {
+    cartModal.style.display = "flex";
+    cartItems.innerHTML = "";
+
+    cart.forEach(item => {
+        cartItems.innerHTML += `
+      <div class="cartItem">
+        <img src="${item.img}" width="50">
+        <p>${item.title} - ${item.price}</p>
+      </div>
+    `;
+    });
+});
+
+closeModal.addEventListener("click", () => {
+    cartModal.style.display = "none";
+});
+

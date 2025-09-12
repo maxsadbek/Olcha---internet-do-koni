@@ -196,13 +196,24 @@
             <i class="ri-heart-line"></i>
             <p>Sevimlilar</p>
         </div>
-        <div class="hero_menu">
-            <div id="sup">
-                <i class="ri-shopping-cart-line"></i>
-                <sup class="no">0</sup>
-            </div>
+        <!-- Savatcha icon -->
+        <div class="cart hero_menu" id="cartIcon">
+            <i class="ri-shopping-cart-line"></i>
+            <span id="cartCount">0</span>
             <p>Savatcha</p>
         </div>
+
+        <div id="productsContainer"></div>
+
+        <!-- Modal suba-->
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <h2>Products</h2>
+                <div id="cartItems"></div>
+            </div>
+        </div>
+
         <div class="hero_menu">
             <i class="ri-user-line"></i>
             <p>Kirish</p>
@@ -291,6 +302,13 @@
     </div>
     <section class="container texnika">
     </section>
+    <div class="modal none">
+        <div class="modal-content">
+            <h2>Savat</h2>
+            <div class="modal-body"></div>
+            <button class="closeModal">Yopish</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 
