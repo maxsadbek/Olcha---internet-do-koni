@@ -30,6 +30,7 @@ const cartIcon = document.getElementById("cartIcon");
 const cartModal = document.getElementById("cartModal");
 const closeModal = document.getElementById("closeModal");
 const cartItems = document.getElementById("cartItems");
+const clear = document.querySelector("#clear")
 
 
 // navbar
@@ -760,3 +761,7 @@ closeModal.addEventListener("click", () => {
     cartModal.style.display = "none";
 });
 
+clear.addEventListener("click", () => {
+    cart = [];
+    cartItems.innerHTML = "";
+});
