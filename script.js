@@ -748,7 +748,7 @@ function texnikCard(item) {
         <br /><br /><br />
         <div class="texnikbtn">
             <button class="btn1">${item.texnikBtn}</button>
-                <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
+            <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
             <button class="btn3" data-id="${item.id}">Muddatli to'lov</button>
         </div>
     `;
@@ -757,6 +757,19 @@ function texnikCard(item) {
 }
 
 cardTexnik.forEach(item => texnikCard(item));
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn3");
+    if (!btn) return;
+
+    const productId = btn.dataset.id;
+    const product = cardTexnik.find(item => item.id == productId);
+
+    if (product) {
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        window.location.href = "./html/product_details.html";
+    }
+});
 
 
 function radarcard(item) {

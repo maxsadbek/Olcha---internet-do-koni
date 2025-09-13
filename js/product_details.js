@@ -80,3 +80,17 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("productImg").src = product.radarImg;
   document.getElementById("productBtn").textContent = product.cardBtn2;
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+  if (!product) {
+    document.body.innerHTML = "<p>Product topilmadi!</p>";
+    return;
+  }
+
+  document.getElementById("productName").textContent = product.texnikText;
+  document.getElementById("productImg").src = product.texnikImg;
+  document.getElementById("productPrice").textContent = product.texnikPrice;
+  document.getElementById("productMonth").textContent = product.texnikMonth;
+  document.getElementById("productBtn").textContent = product.texnikBtn;
+});
