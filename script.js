@@ -1081,10 +1081,18 @@ closeModal.addEventListener("click", () => {
     cartModal.style.display = "none";
 });
 
-clear.addEventListener("click", () => {
+clear.addEventListener("click", (e) => {
     cart = [];
     cartItems.innerHTML = "";
-    cartCount.innerHTML = 0
+    cartCount.innerHTML = 0;
+
+    const btn = e.target.closest(".btn1");
+    if (!btn) return;
+
+    const checkBtn = btn.parentElement.querySelector(".checkBtn");
+
+    btn.classList.add("activeBtn");
+    checkBtn.classList.add("none");
 });
 
 
