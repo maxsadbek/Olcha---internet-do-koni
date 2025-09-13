@@ -18,7 +18,7 @@ const dropdown_menu2 = document.querySelector("#dropdown_menu")
 const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
 const mobileMenu = document.querySelector("#closeMobile")
 let mobileMenuBtn = document.querySelector("#mobileMenu")
-let heart = document.querySelector(".heart i")
+let heart = document.querySelectorAll(".heart i")
 let cradSection = document.querySelector(".cradSection")
 let checkIcon = document.querySelectorAll(".checkIcon i")
 let btn1 = document.querySelectorAll(".btn1")
@@ -31,6 +31,7 @@ const cartModal = document.getElementById("cartModal");
 const closeModal = document.getElementById("closeModal");
 const cartItems = document.getElementById("cartItems");
 const clear = document.querySelector("#clear")
+const likeCount = document.querySelector("#likeCount")
 
 
 // navbar
@@ -750,7 +751,7 @@ cardTexnik.forEach(item => texnikCard(item));
 
 function radarcard(item) {
     const radarDiv = document.createElement("div");
-    radarDiv.classList.add("texnikaCard");
+    radarDiv.classList.add("texnikaCard", "cardDiv");
 
     radarDiv.innerHTML = `
       <div class="chegirma">
