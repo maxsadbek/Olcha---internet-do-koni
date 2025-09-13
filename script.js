@@ -519,6 +519,98 @@ const radarCard = [
     }
 ];
 
+const sportProduct = [
+    {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-01/VDVDBV98LI21S6D9CDPuHCHEiMYPoKoxmbwePdhi7dv8yVoQbxqzlGMuTKC9.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Jismoniy mashqlar velosipedi PowerGym SP47",
+        sportPrice: "1 968 000 so'm",
+        month: "231 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-01/MXfgxMAeiy8TwFebmZLt1jTOtjcbjSLd1zEMzpNEO0Ac4ECx9JN0QhPPHCc9.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Elliptik trenajyori Powergym E131",
+        sportPrice: "3 900 000 so'm",
+        month: "457 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-01/THZIBkgHvYWb9gBVyd2LmvfRleLGUcAWLceQrD0tlNSTsHA7xwv3IdO95s6W.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Yugurish yo‘lagi PowerGym PG-575 (15 DYuM)",
+        sportPrice: "13 000 000 so'm",
+        month: "1 523 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products//supplier/stores/26447/pg17%2Fimage-photoroom.png",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Yugurish yo‘lagi PowerGym PG-575 (15 DYuM)3",
+        sportPrice: "510 000 so'm",
+        month: "60 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-02-06/JlIPCli8QjKMlQSjvftfMgVzUtDaJ0recGoVlUOk0h8xugg97I3BCTi2wdTa.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Eshkak eshish mashinasi PowerGym 1H",
+        sportPrice: "4 800 000 so'm",
+        month: "563 231 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2024-03-23/22FAnnPW2uWcXshNVuHT3nRMljPuiEvNCm1AWriRtPtXp5qXnB39Q2hWdnON.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Universal quvvat dastgohi «DDS-1104»",
+        sportPrice: "1 600 000 so'm",
+        month: "188 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/MyY62VUB24AaxujcxrV5LacygN2Wuc47bZ9x560SSRc28SGivr5jE46Z8bcp.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Sozlanishi mumkin bo‘lgan gantel Feierdun",
+        sportPrice: "770 000 so'm",
+        month: "91 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    }, {
+        id: crypto.randomUUID(),
+        sportImg: "https://olcha.uz/image/700x700/products/bmUBEBTXtEazeIS1Xe10Zrt6Mqk2JL1Oju5d0cgEYEy8exP581nefSd3AS7o.jpg",
+        heartIcon: "ri-heart-line",
+        tableIcon: "ri-bar-chart-line",
+        sportText: "Jismoniy mashqlar velosipedi PowerGym SP47",
+        sportPrice: "4 700 000 so'm",
+        month: "551 000 so'm x 12oy",
+        texnikBtn: "ri-shopping-cart-line",
+        cardBtn2: "Muddatli to'lov",
+        checkIcon: "ri-check-double-line"
+    },
+]
+
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn3")) {
         const productId = e.target.dataset.id;
@@ -804,6 +896,31 @@ function radarcard(item) {
 
 radarCard.forEach(item => radarcard(item));
 
+function sprotCArds(item) {
+    const sportDiv = document.createElement("div");
+    sportDiv.classList.add("radarCardcild", "texnikaCard");
+
+    sportDiv.innerHTML = `
+      <img src="${item.sportImg}" alt="${item.sportText}">
+      <div class="icon">
+          <i class="${item.heartIcon} heart"></i>
+          <i class="${item.tableIcon} tablitsa"></i>
+      </div>
+      <p>${item.sportText}</p>
+      <mark class="mark">${item.month}</mark>
+      <br><br><br>
+      <div class="cardBtn">
+          <button class="btn1"><i class="${item.texnikBtn}"></i></button>
+          <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
+          <button class="btn3" data-id="${item.radarID}">${item.cardBtn2}</button>
+      </div>
+  `;
+
+    document.querySelector(".sportCard").appendChild(sportDiv);
+}
+
+sportProduct.forEach(item => sprotCArds(item));
+
 
 function renderProducts(containerSelector = ".container.gridParent") {
     const container = document.querySelector(containerSelector);
@@ -970,7 +1087,6 @@ clear.addEventListener("click", () => {
     cartCount.innerHTML = 0
 });
 
-renderRadarCards();
 
 document.addEventListener("click", (e) => {
     const btn = e.target.closest(".btn3");
@@ -981,6 +1097,19 @@ document.addEventListener("click", (e) => {
 
     if (product) {
         localStorage.setItem("selectedProduct", JSON.stringify(product));
-        window.location.href = "product_details.html";
+        window.location.href = "./html/product_details.html";
+    }
+});
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn3");
+    if (!btn) return;
+
+    const productId = btn.dataset.id;
+    const product = sportProduct.find(item => item.radarID === productId);
+
+    if (product) {
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        window.location.href = "./html/product_details.html";
     }
 });
