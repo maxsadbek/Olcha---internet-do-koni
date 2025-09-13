@@ -442,7 +442,6 @@ body {
     background: var(--card);
     border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: var(--shadow)
 }
 
 .viewport {
@@ -1256,7 +1255,7 @@ i {
 
 .div6 video {
     width: 500px;
-    height: 300px;
+    height: 30px;
     border-radius: 20px;
 }
 
@@ -1265,7 +1264,7 @@ i {
     grid-row: span 3 / span 3;
     grid-column-start: 8;
     display: flex;
-    width: 500px;
+    width: 570px;
     background-color: #fff;
 }
 
@@ -1274,6 +1273,7 @@ i {
     grid-row: span 9 / span 9;
     grid-column-start: 4;
     grid-row-start: 4;
+    background-color: #fff;
 }
 
 .div9 {
@@ -1281,6 +1281,7 @@ i {
     grid-row: span 9 / span 9;
     grid-column-start: 6;
     grid-row-start: 4;
+    background-color: #fff;
 }
 
 .div10 {
@@ -1288,6 +1289,7 @@ i {
     grid-row: span 9 / span 9;
     grid-column-start: 8;
     grid-row-start: 4;
+    background-color: #fff;
 }
 
 .div11 {
@@ -1295,6 +1297,7 @@ i {
     grid-row: span 9 / span 9;
     grid-column-start: 10;
     grid-row-start: 4;
+    background-color: #fff;
 }
 
 @media screen and (max-width:900px) {
