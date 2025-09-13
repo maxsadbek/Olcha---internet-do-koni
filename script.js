@@ -31,7 +31,8 @@ const cartModal = document.getElementById("cartModal");
 const closeModal = document.getElementById("closeModal");
 const cartItems = document.getElementById("cartItems");
 const clear = document.querySelector("#clear")
-const likeCount = document.querySelector("#likeCount")
+const likeCounts = document.querySelectorAll("#likeCount");
+let i = 0;
 
 
 // navbar
@@ -769,10 +770,10 @@ function radarcard(item) {
       </div>
       <mark class="mark">${item.markRadar}</mark>
       <br><br><br>
-      <div>
+      <div class="cardBtn">
           <button class="btn1"><i class="${item.texnikBtn}"></i></button>
           <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
-          <button class="btn3" data-id="${item.radarID}">${item.cardBtn2}</button>
+          <button class="btn3" data-id="${item.id}">${item.cardBtn2}</button>
       </div>
   `;
 
@@ -877,6 +878,19 @@ function goToProduct(id) {
     console.log("Go to:", id);
     window.location.href = "../html/product_details.html?id=" + id;
 }
+
+localStorage.setItem("card", JSON.stringify(radarCard));
+
+const radarCard1 = JSON.parse(localStorage.getItem("card"));
+
+const radarCard2 = "shuIDniOling";
+const radarSave = radarCard1.find(item => item.id === radarCard2);
+
+function goToProduct(id) {
+    console.log("Go to:", id);
+    window.location.href = "../html/product_details.html?id=" + id;
+}
+
 
 setTimeout(() => {
     document.querySelector(".loader").style.display = "none";
