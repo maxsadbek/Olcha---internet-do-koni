@@ -1569,11 +1569,12 @@ i {
 
     .menu {
         margin-top: -6rem;
-        width: 42 8px;
+        width: 32 0px;
         height: 500px;
         margin-left: -16rem;
         display: flex;
         gap: 0rem;
+        width: 418px;
     }
 
     #menu-btn .close {
