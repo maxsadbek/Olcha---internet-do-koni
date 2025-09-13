@@ -68,3 +68,15 @@ if (product) {
 setTimeout(() => {
   document.querySelector(".loader").style.display = "none";
 }, 1000);
+
+window.addEventListener("DOMContentLoaded", () => {
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+  if (!product) {
+    document.body.innerHTML = "<p>Product topilmadi!</p>";
+    return;
+  }
+
+  document.getElementById("productName").textContent = product.radarText;
+  document.getElementById("productImg").src = product.radarImg;
+  document.getElementById("productBtn").textContent = product.cardBtn2;
+});

@@ -34,7 +34,6 @@ const clear = document.querySelector("#clear")
 const likeCounts = document.querySelectorAll("#likeCount");
 let i = 0;
 
-
 // navbar
 const navItems = [
     { tag: "button", text: "0% Muddatli to'lov", class: "btn light" },
@@ -128,7 +127,7 @@ const card = [
 
 const products = [
     {
-        id: "p1",
+        id: crypto.randomUUID(),
         type: "gridChild",
         badge: "-18%",
         img: "https://olcha.uz/image/700x700/products/fvj1vT8wb3D3Fn9eG654PL9rKdvSnFmoYcaYlI4TR70VQbfxowBvzrEN05hy.jpg",
@@ -138,7 +137,7 @@ const products = [
         installment: "168 000 so'm x 12oy"
     },
     {
-        id: "p2",
+        id: crypto.randomUUID(),
         type: "gridChild",
         badge: "-18%",
         img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/ET18UK96Uz4hpSuE9xUIQoKTcoVeT9dXqkTcdOROl4dWqlJhRi3bGhmbpD1K.jpg",
@@ -149,7 +148,7 @@ const products = [
         extraClass: "c2"
     },
     {
-        id: "p3",
+        id: crypto.randomUUID(),
         type: "grid3",
         badge: "-17%",
         img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/t8jAi1x9RKa6pWGEajlnj6qIYjxEdGn8pgTAxGv0POcJeATULnwVyqkUKzw5.jpg",
@@ -159,7 +158,7 @@ const products = [
         installment: "380 000 so'm x 12oy"
     },
     {
-        id: "p4",
+        id: crypto.randomUUID(),
         type: "grid3",
         badge: "-17%",
         img: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-09-05/vq48GipBCKRQuYab0CmVscCkz94mMPUk3q3uowg9XUN18dIOXKXVK2T2ymTa.jpg",
@@ -169,7 +168,7 @@ const products = [
         installment: "380 000 so'm x 12oy"
     },
     {
-        id: "p5",
+        id: crypto.randomUUID(),
         type: "grid3",
         badge: "-17%",
         img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/t8jAi1x9RKa6pWGEajlnj6qIYjxEdGn8pgTAxGv0POcJeATULnwVyqkUKzw5.jpg",
@@ -179,7 +178,7 @@ const products = [
         installment: "380 000 so'm x 12oy"
     },
     {
-        id: "p6",
+        id: crypto.randomUUID(),
         type: "grid3",
         badge: "-17%",
         img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-09-05/t8jAi1x9RKa6pWGEajlnj6qIYjxEdGn8pgTAxGv0POcJeATULnwVyqkUKzw5.jpg",
@@ -520,12 +519,23 @@ const radarCard = [
     }
 ];
 
-
-
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn3")) {
         const productId = e.target.dataset.id;
         const product = cards.find(c => c.id === productId);
+
+        if (product) {
+            localStorage.setItem("selectedProduct", JSON.stringify(product));
+            console.log("Saqlangan product:", product);
+            window.location.href = "../html/product_details.html";
+        }
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn3")) {
+        const productId = e.target.dataset.id;
+        const product = radarCard.find(c => c.radarID === productId);
 
         if (product) {
             localStorage.setItem("selectedProduct", JSON.stringify(product));
@@ -556,7 +566,6 @@ document.addEventListener("click", (e) => {
     noPlus.textContent = +1;
     i++
 });
-
 
 language.addEventListener("click", () => {
     rus.classList.toggle("active")
@@ -773,7 +782,7 @@ function radarcard(item) {
       <div class="cardBtn">
           <button class="btn1"><i class="${item.texnikBtn}"></i></button>
           <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
-          <button class="btn3" data-id="${item.id}">${item.cardBtn2}</button>
+          <button class="btn3" data-id="${item.radarID}">${item.cardBtn2}</button>
       </div>
   `;
 
@@ -879,19 +888,6 @@ function goToProduct(id) {
     window.location.href = "../html/product_details.html?id=" + id;
 }
 
-localStorage.setItem("card", JSON.stringify(radarCard));
-
-const radarCard1 = JSON.parse(localStorage.getItem("card"));
-
-const radarCard2 = "shuIDniOling";
-const radarSave = radarCard1.find(item => item.id === radarCard2);
-
-function goToProduct(id) {
-    console.log("Go to:", id);
-    window.location.href = "../html/product_details.html?id=" + id;
-}
-
-
 setTimeout(() => {
     document.querySelector(".loader").style.display = "none";
 }, 1000);
@@ -963,3 +959,15 @@ clear.addEventListener("click", () => {
 
 renderRadarCards();
 
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn3");
+    if (!btn) return;
+
+    const productId = btn.dataset.id;
+    const product = radarCard.find(item => item.radarID === productId);
+
+    if (product) {
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        window.location.href = "product_details.html";
+    }
+});
