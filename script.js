@@ -816,7 +816,7 @@ function creatCard(item) {
         <div class="cardBtn">
             <button class="btn1">${item.cardBtn}</button>
             <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
-            <button class="btn3" data-id="${item.id}">${item.cardBtn2}</button>
+            <button class="btn3" data-id="${item.id}" data-type="card">${item.cardBtn2}</button>
         </div>
     `;
 
@@ -842,7 +842,7 @@ function texnikCard(item) {
         <div class="texnikbtn">
             <button class="btn1">${item.texnikBtn}</button>
             <button class="checkBtn none"><i class="ri-check-double-line"></i></button>
-            <button class="btn3" data-id="${item.id}">Muddatli to'lov</button>
+            <button class="btn3" data-id="${item.id}" data-type="texnik">Muddatli to'lov</button>
         </div>
     `;
 
@@ -850,20 +850,6 @@ function texnikCard(item) {
 }
 
 cardTexnik.forEach(item => texnikCard(item));
-
-document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".btn3");
-    if (!btn) return;
-
-    const productId = btn.dataset.id;
-    const product = cardTexnik.find(item => item.id == productId);
-
-    if (product) {
-        localStorage.setItem("selectedProduct", JSON.stringify(product));
-        window.location.href = "./html/product_details.html";
-    }
-});
-
 
 function radarcard(item) {
     const radarDiv = document.createElement("div");
@@ -888,7 +874,7 @@ function radarcard(item) {
       <div class="cardBtn">
           <button class="btn1"><i class="${item.texnikBtn}"></i></button>
           <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
-          <button class="btn3" data-id="${item.radarID}">${item.cardBtn2}</button>
+          <button class="btn3" data-id="${item.radarID}" data-type="radar">${item.cardBtn2}</button>
       </div>
   `;
 
@@ -913,7 +899,7 @@ function sprotCArds(item) {
       <div class="cardBtn">
           <button class="btn1"><i class="${item.texnikBtn}"></i></button>
           <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
-          <button class="btn3" data-id="${item.radarID}">${item.cardBtn2}</button>
+         <button class="btn3" data-id="${item.radarID}" data-type="sport">${item.cardBtn2}</button>
       </div>
   `;
 
@@ -1038,6 +1024,7 @@ function clock() {
     document.querySelector("#minutes").innerHTML = minute
     document.querySelector("#seconds").innerHTML = second
 }
+
 function addToCart(item) {
     cart.push(item);
     count++;
@@ -1096,29 +1083,28 @@ clear.addEventListener("click", (e) => {
     checkBtn.classList.add("none");
 });
 
-
 document.addEventListener("click", (e) => {
     const btn = e.target.closest(".btn3");
     if (!btn) return;
 
     const productId = btn.dataset.id;
-    const product = radarCard.find(item => item.radarID === productId);
+    const productType = btn.dataset.type;
 
-    if (product) {
-        localStorage.setItem("selectedProduct", JSON.stringify(product));
-        window.location.href = "./html/product_details.html";
+    let product;
+
+    if (productType === "card") {
+        product = cards.find(item => item.id == productId);
+    } else if (productType === "texnik") {
+        product = cardTexnik.find(item => item.id == productId);
+    } else if (productType === "radar") {
+        product = radarCard.find(item => item.radarID == productId);
+    } else if (productType === "sport") {
+        product = sportProduct.find(item => item.radarID == productId);
     }
-});
-
-document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".btn3");
-    if (!btn) return;
-
-    const productId = btn.dataset.id;
-    const product = sportProduct.find(item => item.radarID === productId);
 
     if (product) {
-        localStorage.setItem("selectedProduct", JSON.stringify(product));
-        window.location.href = "./html/product_details.html";
+        // turini ham saqlaymiz
+        localStorage.setItem("selectedProduct", JSON.stringify({ ...product, type: productType }));
+        window.location.href = "../html/product_details.html";
     }
 });

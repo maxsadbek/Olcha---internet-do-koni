@@ -69,28 +69,31 @@ setTimeout(() => {
   document.querySelector(".loader").style.display = "none";
 }, 1000);
 
-window.addEventListener("DOMContentLoaded", () => {
+'use strict';
+
+'use strict';
+
+function renderDetail() {
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
-  if (!product) {
-    document.body.innerHTML = "<p>Product topilmadi!</p>";
-    return;
-  }
+  if (!product) return;
 
-  document.getElementById("productName").textContent = product.radarText;
-  document.getElementById("productImg").src = product.radarImg;
-  document.getElementById("productBtn").textContent = product.cardBtn2;
-});
+  const container = document.querySelector(".product-detail");
 
-window.addEventListener("DOMContentLoaded", () => {
-  const product = JSON.parse(localStorage.getItem("selectedProduct"));
-  if (!product) {
-    document.body.innerHTML = "<p>Product topilmadi!</p>";
-    return;
-  }
+  const img = product.img || product.cardImg || product.texnikImg || product.radarImg || product.sportImg;
+  const title = product.title || product.cardText || product.texnikText || product.radarText || product.sportText;
+  const price = product.price || product.cardPrice || product.texnikPrice || product.priceRadar;
+  const oldPrice = product.oldPrice || product.oldPriceRadar || "";
+  const month = product.cardMonth || product.texnikMonth || product.markRadar || product.month || "";
 
-  document.getElementById("productName").textContent = product.texnikText;
-  document.getElementById("productImg").src = product.texnikImg;
-  document.getElementById("productPrice").textContent = product.texnikPrice;
-  document.getElementById("productMonth").textContent = product.texnikMonth;
-  document.getElementById("productBtn").textContent = product.texnikBtn;
-});
+  container.innerHTML = `
+    <div class="detail-card">
+      <img src="${img}" alt="${title}">
+      <h2>${title}</h2>
+      ${price ? `<h3>${price}</h3>` : ""}
+      ${oldPrice ? `<p class="old">${oldPrice}</p>` : ""}
+      ${month ? `<mark>${month}</mark>` : ""}
+    </div>
+  `;
+}
+
+renderDetail();
