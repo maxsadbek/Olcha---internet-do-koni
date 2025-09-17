@@ -1,29 +1,31 @@
 'use strict';
+
+// Asosiy elementlar
 const btn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
-const overlay = document.getElementById('menu');
-const overlay2 = document.getElementById('overlay');
-const menuBtn = document.querySelector(".menuBtn")
-const closeBtn = document.querySelector(".close")
+const overlay2 = document.getElementById('overlay'); // overlay id boshqa bo‘lishi kerak
+const menuBtn = document.querySelector(".menuBtn");
+const closeBtn = document.querySelector(".close");
 const section = document.querySelector(".Cadr_slider_parent");
-const parentSection = document.querySelector(".parent")
-const containerClass = document.querySelector(".parent.container");
-const language = document.querySelector(".language")
-const rus = document.querySelector('#rus')
-const menuMobile = document.querySelector("#menu2 i")
-const ulDropdowns = document.querySelector("#ulDropdowns")
-const dropdownIcon = document.querySelector("#dropdownIcon")
-const ulDropdowns2 = document.querySelector("#ulDropdowns2")
-const dropdownIcon2 = document.querySelector("#dropdownIcon2")
-const dropdown_menu2 = document.querySelector("#dropdown_menu")
-const dropdonwBtn2 = document.querySelector("#dropdonwBtn2")
-const mobileMenu = document.querySelector("#closeMobile")
-let mobileMenuBtn = document.querySelector("#mobileMenu")
-let heart = document.querySelectorAll(".heart i")
-let cradSection = document.querySelector(".cradSection")
-let checkIcon = document.querySelectorAll(".checkIcon i")
-let btn1 = document.querySelectorAll(".btn1")
-let noPlus = document.querySelectorAll(".no")
+const parentSection = document.querySelector(".parent");
+const containerClass = document.querySelector(".parent .container");
+const language = document.querySelector(".language");
+const rus = document.querySelector('#rus');
+const menuMobile = document.querySelector("#menu2 i");
+const ulDropdowns = document.querySelector("#ulDropdowns");
+const dropdownIcon = document.querySelector("#dropdownIcon");
+const ulDropdowns2 = document.querySelector("#ulDropdowns2");
+const dropdownIcon2 = document.querySelector("#dropdownIcon2");
+const dropdown_menu2 = document.querySelector("#dropdown_menu");
+const dropdonwBtn2 = document.querySelector("#dropdonwBtn2");
+const mobileMenu = document.querySelector("#closeMobile");
+let mobileMenuBtn = document.querySelector("#mobileMenu");
+// Savat va sevimlilar
+let heart = document.querySelectorAll(".heart i");
+let checkIcon = document.querySelectorAll(".checkIcon i");
+let btn1 = document.querySelectorAll(".btn1");
+let noPlus = document.querySelectorAll(".no");
+let cradSection = document.querySelector(".cradSection");
 let cart = [];
 let count = 0;
 const cartCount = document.getElementById("cartCount");
@@ -31,9 +33,17 @@ const cartIcon = document.getElementById("cartIcon");
 const cartModal = document.getElementById("cartModal");
 const closeModal = document.getElementById("closeModal");
 const cartItems = document.getElementById("cartItems");
-const clear = document.querySelector("#clear")
+const clear = document.getElementById("clear");
 const likeCounts = document.querySelectorAll("#likeCount");
+const heartSectio = document.getElementById("heartSection");
 let i = 0;
+const favSection = document.getElementById('favSection');
+const favModal = document.getElementById('favModals');
+const favList = document.getElementById('favLists');
+const closeBtn2 = document.querySelector('.closes');
+const likeCount = favSection.querySelector('.likeCount');
+let liked = [];
+
 
 // navbar
 const navItems = [
@@ -626,19 +636,6 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn3")) {
-        const productId = e.target.dataset.id;
-        const product = radarCard.find(c => c.radarID === productId);
-
-        if (product) {
-            localStorage.setItem("selectedProduct", JSON.stringify(product));
-            console.log("Saqlangan product:", product);
-            window.location.href = "../html/product_details.html";
-        }
-    }
-});
-
-document.addEventListener("click", (e) => {
     const heart = e.target.closest(".heart");
     if (!heart) return;
     heart.classList.toggle("activs");
@@ -851,7 +848,7 @@ function texnikCard(item) {
 
 cardTexnik.forEach(item => texnikCard(item));
 
-function radarcard(item) {
+function radarCardRender(item) {
     const radarDiv = document.createElement("div");
     radarDiv.classList.add("texnikaCard", "cardDiv");
 
@@ -881,9 +878,7 @@ function radarcard(item) {
     document.querySelector(".radarCard").appendChild(radarDiv);
 }
 
-radarCard.forEach(item => radarcard(item));
-
-function sprotCArds(item) {
+function sportCardRender(item) {
     const sportDiv = document.createElement("div");
     sportDiv.classList.add("radarCardcild", "texnikaCard");
 
@@ -899,14 +894,41 @@ function sprotCArds(item) {
       <div class="cardBtn">
           <button class="btn1"><i class="${item.texnikBtn}"></i></button>
           <button class="checkBtn none"><i class="${item.checkIcon}"></i></button>
-         <button class="btn3" data-id="${item.radarID}" data-type="sport">${item.cardBtn2}</button>
+          <button class="btn3" data-id="${item.id}" data-type="sport">${item.cardBtn2}</button>
       </div>
   `;
 
     document.querySelector(".sportCard").appendChild(sportDiv);
 }
 
-sportProduct.forEach(item => sprotCArds(item));
+radarCard.forEach(item => radarCardRender(item));
+sportProduct.forEach(item => sportCardRender(item));
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn3");
+    if (!btn) return;
+
+    const productId = btn.dataset.id;
+    const productType = btn.dataset.type;
+
+    let product;
+
+    if (productType === "card") {
+        product = cards.find(item => item.id == productId);
+    } else if (productType === "texnik") {
+        product = cardTexnik.find(item => item.id == productId);
+    } else if (productType === "radar") {
+        product = radarCard.find(item => item.radarID == productId);
+    } else if (productType === "sport") {
+        product = sportProduct.find(item => item.id == productId);
+    }
+
+    if (product) {
+        // turini ham saqlaymiz
+        localStorage.setItem("selectedProduct", JSON.stringify({ ...product, type: productType }));
+        window.location.href = "../html/product_details.html";
+    }
+});
 
 
 function renderProducts(containerSelector = ".container.gridParent") {
@@ -993,21 +1015,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })();
 
-localStorage.setItem("card", JSON.stringify(card));
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn3");
+    if (!btn) return;
 
-const savedCard = JSON.parse(localStorage.getItem("card"));
+    const productId = btn.dataset.id;
+    const productType = btn.dataset.type;
 
-const selectedId = "shuIDniOling";
-const selectedCard = savedCard.find(item => item.id === selectedId);
+    let product;
 
-function goToProduct(id) {
-    console.log("Go to:", id);
-    window.location.href = "../html/product_details.html?id=" + id;
-}
+    if (productType === "card") {
+        product = cards.find(item => item.id === productId);
+    } else if (productType === "texnik") {
+        product = cardTexnik.find(item => item.id === productId);
+    } else if (productType === "radar") {
+        product = radarCard.find(item => item.radarID === productId); // radarID bilan qidirmoqdamiz
+    } else if (productType === "sport") {
+        product = sportProduct.find(item => item.id === productId); // sportProductda id ishlatilgan
+    }
+
+    if (product) {
+        // tanlangan productni saqlaymiz
+        localStorage.setItem("selectedProduct", JSON.stringify({ ...product, type: productType }));
+        window.location.href = "../html/product_details.html";
+    }
+});
+
 
 setTimeout(() => {
     document.querySelector(".loader").style.display = "none";
-}, 1000);
+}, 550);
 
 // time
 function clock() {
@@ -1069,19 +1106,42 @@ closeModal.addEventListener("click", () => {
     cartModal.style.display = "none";
 });
 
-clear.addEventListener("click", (e) => {
-    cart = [];
-    cartItems.innerHTML = "";
-    cartCount.innerHTML = 0;
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn1");
+    if (!btn) return;
 
+    const checkIcon = btn.parentElement.querySelector(".checkIcon");
+
+    btn.classList.add("activeBtn");
+    checkIcon.classList.remove("none");
+});
+
+document.addEventListener("click", (e) => {
     const btn = e.target.closest(".btn1");
     if (!btn) return;
 
     const checkBtn = btn.parentElement.querySelector(".checkBtn");
+    if (!checkBtn) return;
 
-    btn.classList.add("activeBtn");
-    checkBtn.classList.add("none");
+    btn.classList.add("none");
+    checkBtn.classList.remove("none");
 });
+
+clear.addEventListener("click", () => {
+    document.querySelectorAll(".checkBtn").forEach(checkBtn => {
+        checkBtn.classList.add("none");
+        const btn = checkBtn.parentElement.querySelector(".btn1");
+        if (btn) btn.classList.remove("none");
+    });
+
+    cart = [];
+    cartItems.innerHTML = "";
+    cartCount.innerHTML = 0;
+});
+
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+const heartSection = document.getElementById("heartSection");
 
 document.addEventListener("click", (e) => {
     const btn = e.target.closest(".btn3");
@@ -1099,8 +1159,9 @@ document.addEventListener("click", (e) => {
     } else if (productType === "radar") {
         product = radarCard.find(item => item.radarID == productId);
     } else if (productType === "sport") {
-        product = sportProduct.find(item => item.radarID == productId);
+        product = sportProduct.find(item => item.id == productId);
     }
+
 
     if (product) {
         // turini ham saqlaymiz
@@ -1108,3 +1169,26 @@ document.addEventListener("click", (e) => {
         window.location.href = "../html/product_details.html";
     }
 });
+
+document.body.addEventListener('click', e => {
+    if (e.target.closest('.heartIcon')) {
+        const icon = e.target.closest('.heartIcon');
+        const productName = icon.closest('.product').dataset.name;
+        if (liked.includes(productName)) {
+            liked = liked.filter(n => n !== productName);
+            icon.classList.remove('liked');
+        } else {
+            liked.push(productName);
+            icon.classList.add('liked');
+        }
+        likeCount.textContent = liked.length;
+    }
+});
+
+favSection.addEventListener('click', () => {
+    favList.innerHTML = liked.map(n => `<li>${n}</li>`).join('');
+    favModal.style.display = 'block';
+});
+
+closeBtn2.addEventListener('click', () => favModal.style.display = 'none');
+window.addEventListener('click', e => { if (e.target === favModal) favModal.style.display = 'none'; });

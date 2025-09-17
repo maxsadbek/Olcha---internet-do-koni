@@ -17,10 +17,10 @@
 </head>
 
 <body>
-
+    <!--
     <div class="loader">
         <div class="spinner"></div>
-    </div>
+    </div> -->
     <!-- mobile ilova -->
     <section class="container mobile">
         <div>
@@ -191,11 +191,23 @@
             <i class="ri-bar-chart-line"></i>
             <p>Taqqoslash</p>
         </div>
-        <div class="hero_menu cart2" id="heartSection">
+        <!-- Sevimlilar icon -->
+        <!-- Fav Section -->
+        <div class="hero_menu cart2" id="favSection">
             <i class="ri-heart-line"></i>
             <span class="likeCount">0</span>
             <p>Sevimlilar</p>
         </div>
+
+        <!-- Modal -->
+        <div id="favModals" class="modals">
+            <div class="modal-contents">
+                <span class="closes">&times;</span>
+                <h2>Sevimlilar</h2>
+                <ul id="favLists"></ul>
+            </div>
+        </div><div id="productsContainer"></div>
+
         <!-- Savatcha icon -->
         <div class="cart hero_menu" id="cartIcon">
             <i class="ri-shopping-cart-line"></i>

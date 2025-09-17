@@ -71,8 +71,6 @@ setTimeout(() => {
 
 'use strict';
 
-'use strict';
-
 function renderDetail() {
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
   if (!product) return;
@@ -95,5 +93,6 @@ function renderDetail() {
     </div>
   `;
 }
+
 
 renderDetail();
