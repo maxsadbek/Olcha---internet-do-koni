@@ -1345,6 +1345,53 @@ i {
     color: red;
 }
 
+.macbook {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.macImg img {
+    width: 930px;
+    height: 99%;
+    border-radius: 15px;
+}
+
+.macCards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.macCard {
+    width: 230px;
+    height: 420px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.macCard img {
+    margin-left: 0rem;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.macCard p {
+    margin-top: 1rem;
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.macCard h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
 @media screen and (max-width:900px) {
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -2413,7 +2460,7 @@ i {
         max-width: 10px;
     }
 
-    video{
+    video {
         max-width: 100px;
         height: auto;
     }
