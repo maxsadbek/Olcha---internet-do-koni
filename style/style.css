@@ -2426,6 +2426,7 @@ i {
         width: 100%;
         flex-direction: column;
         background-color: #fff;
+        margin-left: 0;
     }
 
     .div8 {
