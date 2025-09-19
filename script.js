@@ -824,12 +824,14 @@ cards.forEach(item => creatCard(item));
 
 function texnikCard(item) {
     const texnikDiv = document.createElement("div");
-    texnikDiv.classList.add("texnikaCard");
+    texnikDiv.classList.add("texnikaCard", "product");
+    texnikDiv.dataset.id = item.id; // productga id qo‘shdik
+    texnikDiv.dataset.name = item.texnikText;
 
     texnikDiv.innerHTML = `
         <img src="${item.texnikImg}" alt="${item.texnikText}">
         <div class="icons">
-            <i class="heart ${item.texnikHeart}"></i>
+            <i class="heartIcon heart ${item.texnikHeart}"></i>
             <i class="${item.texnikTables}"></i>
         </div>
         <p>${item.texnikText}</p>
@@ -850,7 +852,9 @@ cardTexnik.forEach(item => texnikCard(item));
 
 function radarCardRender(item) {
     const radarDiv = document.createElement("div");
-    radarDiv.classList.add("texnikaCard", "cardDiv");
+    radarDiv.classList.add("texnikaCard", "cardDiv", "product");
+    radarDiv.dataset.id = item.radarID;
+    radarDiv.dataset.type = "radar";
 
     radarDiv.innerHTML = `
       <div class="chegirma">
@@ -858,7 +862,7 @@ function radarCardRender(item) {
       </div>
       <img src="${item.radarImg}" alt="${item.radarText}">
       <div class="icon">
-          <i class="${item.heartIcon} heart"></i>
+          <i class="${item.heartIcon} heartIcon"></i>   <!-- 🔑 heartIcon class qo‘shdim -->
           <i class="${item.tableIcon} tablitsa"></i>
       </div>
       <p>${item.radarText}</p>
@@ -878,14 +882,18 @@ function radarCardRender(item) {
     document.querySelector(".radarCard").appendChild(radarDiv);
 }
 
+
+
 function sportCardRender(item) {
     const sportDiv = document.createElement("div");
-    sportDiv.classList.add("radarCardcild", "texnikaCard");
+    sportDiv.classList.add("radarCardcild", "texnikaCard", "product");
+    sportDiv.dataset.id = item.id; // id qo‘shildi
+    sportDiv.dataset.name = item.sportText;
 
     sportDiv.innerHTML = `
       <img src="${item.sportImg}" alt="${item.sportText}">
       <div class="icon">
-          <i class="${item.heartIcon} heart"></i>
+          <i class="heartIcon ${item.heartIcon} heart"></i>
           <i class="${item.tableIcon} tablitsa"></i>
       </div>
       <p>${item.sportText}</p>
@@ -924,7 +932,6 @@ document.addEventListener("click", (e) => {
     }
 
     if (product) {
-        // turini ham saqlaymiz
         localStorage.setItem("selectedProduct", JSON.stringify({ ...product, type: productType }));
         window.location.href = "../html/product_details.html";
     }
@@ -1192,3 +1199,71 @@ favSection.addEventListener('click', () => {
 
 closeBtn2.addEventListener('click', () => favModal.style.display = 'none');
 window.addEventListener('click', e => { if (e.target === favModal) favModal.style.display = 'none'; });
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn3");
+    if (!btn) return;
+
+    const productId = btn.dataset.id;
+    const productType = btn.dataset.type;
+
+    let product;
+
+    if (productType === "texnik") {
+        product = cardTexnik.find(item => item.id == productId);
+    } else if (productType === "radar") {
+        product = radarCard.find(item => item.radarID == productId);
+    } else if (productType === "sport") {
+        product = sportProduct.find(item => item.id == productId);
+    }
+
+    if (product) {
+        let normalizedProduct = {
+            id: productId,
+            type: productType,
+            name:
+                (productType === "texnik" && product.texnikText) ||
+                (productType === "radar" && product.radarText) ||
+                (productType === "sport" && product.sportText) ||
+                "Noma’lum mahsulot",
+            img:
+                (productType === "texnik" && product.texnikImg) ||
+                (productType === "radar" && product.radarImg) ||
+                (productType === "sport" && product.sportImg) ||
+                "default.jpg",
+            price:
+                (productType === "texnik" && product.texnikPrice) ||
+                (productType === "radar" && product.priceRadar) ||
+                (productType === "sport" && product.sportPrice) ||
+                "Narxi ko‘rsatilmagan",
+            oldPrice:
+                (productType === "radar" && product.oldPriceRadar) ||
+                null,
+            month:
+                (productType === "texnik" && product.texnikMonth) ||
+                (productType === "radar" && product.markRadar) ||
+                (productType === "sport" && product.month) ||
+                null,
+        };
+
+        localStorage.setItem("selectedProduct", JSON.stringify(normalizedProduct));
+        window.location.href = "../html/product_details.html";
+    }
+});
+
+document.body.addEventListener('click', e => {
+    if (e.target.closest('.heartIcon')) {
+        const icon = e.target.closest('.heartIcon');
+        const product = icon.closest('.product');
+        const productId = product.dataset.id;
+
+        if (liked.includes(productId)) {
+            liked = liked.filter(id => id !== productId);
+            icon.classList.remove('liked');
+        } else {
+            liked.push(productId);
+            icon.classList.add('liked');
+        }
+        likeCount.textContent = liked.length;
+    }
+});

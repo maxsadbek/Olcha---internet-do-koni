@@ -70,18 +70,18 @@ setTimeout(() => {
 }, 1000);
 
 'use strict';
-
 function renderDetail() {
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
   if (!product) return;
 
-  const container = document.querySelector(".product-detail");
+  const container = document.querySelector(".product-details");
 
-  const img = product.img || product.cardImg || product.texnikImg || product.radarImg || product.sportImg;
-  const title = product.title || product.cardText || product.texnikText || product.radarText || product.sportText;
-  const price = product.price || product.cardPrice || product.texnikPrice || product.priceRadar;
+  const img = product.cardImg || product.radarImg || product.texnikImg || product.sportImg || product.img;
+  const title = product.cardText || product.radarText || product.texnikText || product.sportText || product.title;
+  const price = product.price || product.cardPrice || product.texnikPrice || product.priceRadar || "Narxi yo‘q";
   const oldPrice = product.oldPrice || product.oldPriceRadar || "";
   const month = product.cardMonth || product.texnikMonth || product.markRadar || product.month || "";
+
 
   container.innerHTML = `
     <div class="detail-card">
@@ -93,6 +93,9 @@ function renderDetail() {
     </div>
   `;
 }
+
+renderDetail();
+
 
 
 renderDetail();
