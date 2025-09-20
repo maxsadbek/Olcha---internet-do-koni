@@ -17,10 +17,9 @@
 </head>
 
 <body>
-    <!--
     <div class="loader">
         <div class="spinner"></div>
-    </div> -->
+    </div>
     <!-- mobile ilova -->
     <section class="container mobile">
         <div>
@@ -193,21 +192,12 @@
         </div>
         <!-- Sevimlilar icon -->
         <!-- Fav Section -->
-        <div class="hero_menu cart2" id="favSection">
+        <div class="hero_menu ">
             <i class="ri-heart-line"></i>
             <span class="likeCount">0</span>
             <p>Sevimlilar</p>
         </div>
 
-        <!-- Modal -->
-        <div id="favModals" class="modals">
-            <div class="modal-contents">
-                <span class="closes">&times;</span>
-                <h2>Sevimlilar</h2>
-                <ul id="favLists"></ul>
-            </div>
-        </div>
-        <div id="productsContainer"></div>
 
         <!-- Savatcha icon -->
         <div class="cart hero_menu" id="cartIcon">
@@ -229,10 +219,25 @@
             </div>
         </div>
 
-        <div class="hero_menu">
+        <div class="hero_menu cart2" id="favSection">
             <i class="ri-user-line"></i>
             <p>Kirish</p>
         </div>
+        <!-- Modal -->
+        <div id="favModals" class="modals">
+            <div class="modal-contents">
+                <span class="closes">&times;</span>
+                <h2>Tizimga kirish yoki profil yaratish
+                </h2>
+                <br>
+                <p>Telefon raqami</p>
+                <input type="tel" placeholder="Phone number" required>
+                <button>Tasdiqlash</button>
+                <ul id="favLists"></ul>
+            </div>
+        </div>
+        <div id="productsContainer"></div>
+
     </section>
     <div id="menu2" class="navMenu">
         <i class="ri-menu-line menu2"></i>
