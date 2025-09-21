@@ -17,9 +17,9 @@
 </head>
 
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="spinner"></div>
-    </div>
+    </div> -->
     <!-- mobile ilova -->
     <section class="container mobile">
         <div>
@@ -191,11 +191,18 @@
             <p>Taqqoslash</p>
         </div>
         <!-- Sevimlilar icon -->
-        <!-- Fav Section -->
-        <div class="hero_menu ">
+        <div class="hero_menu hearts">
             <i class="ri-heart-line"></i>
-            <span class="likeCount">0</span>
+            <span class="favCounter">0</span>
             <p>Sevimlilar</p>
+        </div>
+
+        <div class="favBox" style="display:none">
+            <div class="favBox-content">
+                <span class="favBox-close">&times;</span>
+                <h2>❤️ Sevimlilar</h2>
+                <div class="favBox-list"></div>
+            </div>
         </div>
 
 
@@ -231,8 +238,11 @@
                 </h2>
                 <br>
                 <p>Telefon raqami</p>
-                <input type="tel" placeholder="Phone number" required>
-                <button>Tasdiqlash</button>
+                <input id="favModalInput" type="tel" placeholder="+998 ** *** ** **" required>
+                <span id="contactSpan"></span>
+                <br>
+                <br>
+                <button id="contactBtn">Tasdiqlash</button>
                 <ul id="favLists"></ul>
             </div>
         </div>

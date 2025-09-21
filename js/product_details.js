@@ -69,7 +69,6 @@ setTimeout(() => {
   document.querySelector(".loader").style.display = "none";
 }, 1000);
 
-'use strict';
 function renderDetail() {
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
   if (!product) return;
@@ -93,9 +92,5 @@ function renderDetail() {
     </div>
   `;
 }
-
-renderDetail();
-
-
 
 renderDetail();

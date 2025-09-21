@@ -1323,17 +1323,17 @@ i {
     text-align: start;
 }
 
-.modal-contents h2{
+.modal-contents h2 {
     margin-top: 1rem;
     font-size: 34px;
     font-weight: 400;
 }
 
-.modal-contents p{
+.modal-contents p {
     opacity: 0.5;
 }
 
-.modal-contents button{
+.modal-contents button {
     background-color: #E17F93;
     padding: 14px 20px;
     text-align: center;
@@ -1341,12 +1341,12 @@ i {
     color: #fff;
 }
 
-.modal-contents button:hover{
+.modal-contents button:hover {
     background-color: transparent;
     color: #E17F93;
 }
 
-.modal-contents input{
+.modal-contents input {
     margin-top: 1rem;
     width: 100%;
     background-color: transparent;
@@ -1359,6 +1359,7 @@ i {
     float: right;
     font-size: 28px;
     cursor: pointer;
+    transition: 0.27s all ease-in-out;
 }
 
 .closes:hover {
@@ -1410,6 +1411,72 @@ i {
 .macCard h3 {
     font-size: 20px;
     margin-bottom: 1rem;
+}
+
+#contactSpan {
+    margin-top: -1rem;
+}
+
+.favBox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.favBox-content {
+    background: #fff;
+    margin: 8% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    max-height: 70vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.favBox-close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.favBox-close:hover {
+    color: red;
+}
+
+.favBox-list .fav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+.favBox-list img {
+    border-radius: 6px;
+}
+
+.favBox-list p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media screen and (max-width:900px) {

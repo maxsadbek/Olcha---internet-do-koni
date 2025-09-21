@@ -42,7 +42,29 @@ const favModal = document.getElementById('favModals');
 const favList = document.getElementById('favLists');
 const closeBtn2 = document.querySelector('.closes');
 const likeCount = favSection.querySelector('.likeCount');
+const contactBtn = document.querySelector("#contactBtn")
+let contactSpan = document.querySelector("#contactSpan")
+const favModalInput = document.getElementById("favModalInput");
 let liked = [];
+document.addEventListener("DOMContentLoaded", () => {
+    const favBox = document.querySelector(".favBox");
+    const favClose = document.querySelector(".favBox-close");
+    const favMenu = document.querySelector(".hearts");
+
+    favMenu.onclick = () => {
+        favBox.style.display = "block";
+    };
+
+    favClose.onclick = () => {
+        favBox.style.display = "none";
+    };
+
+    window.onclick = (e) => {
+        if (e.target === favBox) {
+            favBox.style.display = "none";
+        }
+    };
+});
 
 
 // navbar
@@ -765,7 +787,7 @@ function createGridBox(items) {
 
 function createGrid3(item) {
     const card = document.createElement("div");
-    card.classList.add("grid3");
+    card.classList.add("grid3", "product");
 
     card.innerHTML = `
       <i class="heart ri-heart-line"></i>
@@ -881,8 +903,6 @@ function radarCardRender(item) {
 
     document.querySelector(".radarCard").appendChild(radarDiv);
 }
-
-
 
 function sportCardRender(item) {
     const sportDiv = document.createElement("div");
@@ -1026,7 +1046,7 @@ document.addEventListener("click", (e) => {
     const btn = e.target.closest(".btn3");
     if (!btn) return;
 
-    const productId = btn.dataset.id;
+    const productId = Number(btn.dataset.id);
     const productType = btn.dataset.type;
 
     let product;
@@ -1036,17 +1056,21 @@ document.addEventListener("click", (e) => {
     } else if (productType === "texnik") {
         product = cardTexnik.find(item => item.id === productId);
     } else if (productType === "radar") {
-        product = radarCard.find(item => item.radarID === productId); // radarID bilan qidirmoqdamiz
+        product = radarCard.find(item => item.radarID === productId);
     } else if (productType === "sport") {
-        product = sportProduct.find(item => item.id === productId); // sportProductda id ishlatilgan
+        product = sportProduct.find(item => item.id === productId);
     }
 
     if (product) {
-        // tanlangan productni saqlaymiz
-        localStorage.setItem("selectedProduct", JSON.stringify({ ...product, type: productType }));
+        localStorage.setItem("selectedProduct", JSON.stringify({
+            ...product,
+            type: productType
+        }));
+
         window.location.href = "../html/product_details.html";
     }
 });
+
 
 
 setTimeout(() => {
@@ -1171,7 +1195,6 @@ document.addEventListener("click", (e) => {
 
 
     if (product) {
-        // turini ham saqlaymiz
         localStorage.setItem("selectedProduct", JSON.stringify({ ...product, type: productType }));
         window.location.href = "../html/product_details.html";
     }
@@ -1267,3 +1290,78 @@ document.body.addEventListener('click', e => {
         likeCount.textContent = liked.length;
     }
 });
+
+contactBtn.addEventListener("click", () => {
+    if (favModalInput.value.trim() === "") {
+        contactSpan.textContent = "Iltimos telefon raqamingizni kiriting";
+        contactSpan.style.color = "red";
+        setTimeout(() => {
+            contactSpan.textContent = " ";
+        }, 2900)
+    }
+    else if (isNaN(favModalInput.value)) {
+        contactSpan.textContent = "Iltimos telefon raqamingizni kiriting";
+        contactSpan.style.color = "red";
+        setTimeout(() => {
+            contactSpan.textContent = " ";
+        }, 2900)
+    }
+    else if (favModalInput.value < 12) {
+        contactSpan.textContent = "Iltimos tug'ri nomer kiritishingizni suraymiz"
+        contactSpan.style.color = "red";
+        setTimeout(() => {
+            contactSpan.textContent = " ";
+        }, 2900)
+    }
+    else {
+        contactSpan.textContent = "✅";
+        favModalInput.style.borderColor = "green";
+        setTimeout(() => {
+            contactSpan.textContent = " ";
+            favModalInput.style.borderColor = "black";
+        }, 2900)
+    }
+});
+
+const klickKey = () => {
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            if (favModalInput.value.trim() === "") {
+                contactSpan.textContent = "Iltimos telefon raqamingizni kiriting";
+                contactSpan.style.color = "red";
+                setTimeout(() => {
+                    contactSpan.textContent = " ";
+                }, 2900)
+            }
+            else if (isNaN(favModalInput.value)) {
+                contactSpan.textContent = "Iltimos telefon raqamingizni kiriting";
+                contactSpan.style.color = "red";
+                setTimeout(() => {
+                    contactSpan.textContent = " ";
+                }, 2900)
+            }
+            else {
+                contactSpan.textContent = "✅";
+                favModalInput.style.borderColor = "green";
+                setTimeout(() => {
+                    contactSpan.textContent = " ";
+                    favModalInput.style.borderColor = "black";
+                }, 2900)
+            }
+        }
+    });
+}
+klickKey();
+
+
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        favModal.style.display = 'none';
+    }
+});
+
+
+esk()
+console.log(esk())
+
