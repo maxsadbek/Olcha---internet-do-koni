@@ -46,26 +46,6 @@ const contactBtn = document.querySelector("#contactBtn")
 let contactSpan = document.querySelector("#contactSpan")
 const favModalInput = document.getElementById("favModalInput");
 let liked = [];
-document.addEventListener("DOMContentLoaded", () => {
-    const favBox = document.querySelector(".favBox");
-    const favClose = document.querySelector(".favBox-close");
-    const favMenu = document.querySelector(".hearts");
-
-    favMenu.onclick = () => {
-        favBox.style.display = "block";
-    };
-
-    favClose.onclick = () => {
-        favBox.style.display = "none";
-    };
-
-    window.onclick = (e) => {
-        if (e.target === favBox) {
-            favBox.style.display = "none";
-        }
-    };
-});
-
 
 // navbar
 const navItems = [
@@ -278,6 +258,7 @@ const cards = [
         cardBtn: "<i class='ri-shopping-cart-line'></i>",
         cardBtn2: "Muddatli to'lov"
     }, {
+        id: crypto.randomUUID(),
         cardImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-29/iupANfMv7Z23H8WOmxokqdIP1xRaJpfex9wn7dBo6Rx7D0LNfJOo5umxEeHV.jpg",
         cradHeart: "ri-heart-line",
         cardTables: "ri-bar-chart-line tablitsa",
@@ -411,7 +392,7 @@ const cardTexnik = [
 
 const radarCard = [
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-38%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/jdQQlLwyBqRwbfHoKtBSGjkM0CvG5roLC3RGBCHlo2zjCH7mzb82ODbB3He3.jpg",
         heartIcon: "ri-heart-line",
@@ -425,7 +406,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-43%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/RdJxc6HJoXodAUp98xd1u2QXUxEuEZgRlijMpjej9CIiY5j4rSwQMGHZO8Mx.jpg",
         heartIcon: "ri-heart-line",
@@ -439,7 +420,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-35%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/BNZKWUc7H81qHbWjaoQqForyXrKLI8L18FWOHEbhW4YQuquOIrcanzhyhLVo.jpg",
         heartIcon: "ri-heart-line",
@@ -453,7 +434,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-40%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/WpQah1iCO6puwPxVAT0PVM6t1YyQmapW1YaEl0aCy4TI5Pb0TTEhrciMJluL.jpg",
         heartIcon: "ri-heart-line",
@@ -467,7 +448,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-33%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/6BbzlC3vRAlX25Z10j3IK9R1egNtG61Um3xO5m4snkM3L3XF5jYPyKuuuyqf.jpg",
         heartIcon: "ri-heart-line",
@@ -481,7 +462,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-37%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/VVchpHMms7wk82m6sn9Rm24MHKtF930CW9Zk1HQvIEwHU6Fp6yqjdVlSSACF.jpg",
         heartIcon: "ri-heart-line",
@@ -495,7 +476,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-30%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/PZVlUORpAsYIS0nYE8flS9JmMbqJLV0fscTXsnANIImkmJZDDFZKC6TxGvO9.jpg",
         heartIcon: "ri-heart-line",
@@ -509,7 +490,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-41%",
         radarImg: "https://olcha.uz/image/400x400/products/cdn_1/supplier/stores/1/2025-07-07/nI4JjB74J3Pfydk4fFfY40AQAksrrxBYx5U0fjWH6LPf6Ea9NXHenRzJY8kj.jpg",
         heartIcon: "ri-heart-line",
@@ -523,7 +504,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-29%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/Fkl4isDetRXYOGEz4k10lNnneUXRQKSdPGw2Asafe2ydLno5cy8xrbt0W2q2.jpg",
         heartIcon: "ri-heart-line",
@@ -537,7 +518,7 @@ const radarCard = [
         checkIcon: "ri-check-double-line"
     },
     {
-        radarID: crypto.randomUUID(),
+        id: crypto.randomUUID(),
         btn: "-32%",
         radarImg: "https://olcha.uz/image/700x700/products/cdn_1/supplier/stores/1/2025-07-07/1aP6S6rQt1UStZTJXpXzZ0Ydsf3HZte6C3P1MYLzcRGC5WRNPuZ8vmt45gwh.jpg",
         heartIcon: "ri-heart-line",
@@ -704,6 +685,26 @@ mobileMenu.addEventListener("click", () => {
     menu.classList.remove("active")
     btn.classList.remove("open");
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const favBox = document.querySelector(".favBox");
+    const favClose = document.querySelector(".favBox-close");
+    const favMenu = document.querySelector(".hearts");
+
+    favMenu.onclick = () => {
+        favBox.style.display = "block";
+    };
+
+    favClose.onclick = () => {
+        favBox.style.display = "none";
+    };
+
+    window.onclick = (e) => {
+        if (e.target === favBox) {
+            favBox.style.display = "none";
+        }
+    };
+});
 
 
 // cardlar
@@ -1346,7 +1347,7 @@ const klickKey = () => {
                 setTimeout(() => {
                     contactSpan.textContent = " ";
                     favModalInput.style.borderColor = "black";
-                }, 2900)
+                }, 2700)
             }
         }
     });
@@ -1358,10 +1359,10 @@ klickKey();
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         favModal.style.display = 'none';
+        favModalInput.value = " "
     }
 });
 
 
 esk()
 console.log(esk())
-
